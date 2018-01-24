@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>test</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link href='mutinymap.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        /*body { margin:0; padding:0; }*/
+        #map { position:fixed; top:0; bottom:0; width:50%;}
+    </style>
+</head>
+<body>
+ <style>
+section {
+    padding:  25px 50px;
+    line-height: 25px;
+    border-bottom: 1px solid #ddd;
+    opacity: 0.25;
+    font-size: 13px;
+}
+section.active {
+    opacity: 1;
+}
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 200px;
+}
+</style>
+<div id='map'></div>
+<div id='features'>
+  
+<section id='baker' class='active'>
+        <h3>Godfrey</h3>
+        <p>General Godfrey's diary" 'As we drew into Udaipur Station I noticed an RAF plane in the airfield, This looked a bit ominous and my apprehensions were confirmed when I Saw Kirkbride, the Resident, Standing On A platform with a sealed envelope in his hand.</p>
+        <img src='https://upload.wikimedia.org/wikipedia/en/e/e6/RIN_HMIS_Hindustan.jpg' width="500">
+    </section>
+    <section id='aldgate'>
+        <h3>HMIS Talwar Uprising</h3>
+        <p>On the 21st of January 1946, the Commanding Officer of Talwar, Lieut Commander Cole was relieved by Commander King. Similar slogans again appeared in the night of the 1st/2nd February 1946.</p>
+    </section>
+    <section id='london-bridge'>
+        <h3>J.J. Hospital Junction</h3>
+        <p>British troops went into action for the first time at about 1 pm today near JJ Hospital junction. They fired several rounds to disperse a riotous and menacing mob which was throwing stones.</p>
+    </section>
+    <section id='woolwich'>
+        <h3>Telegram Sent</h3>
+        <p>British troops went into action for the first time at about 1 pm today near JJ Hospital junction. They fired several rounds to disperse a riotous and menacing mob which was throwing stones.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/iHEpip8axjQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </section>
+    <section id='gloucester'>
+        <h3>Insert Title</h3>
+        <p>Insert Paragraph Here</p>
+    </section>
+    <section id='caulfield-gardens'>
+        <h3>Insert Title</h3>
+        <p>Insert Paragraph Here</p>
+    </section>
+    <section id='telegraph'>
+        <h3>Insert Title</h3>
+        <p>Insert Paragraph Here</p>
+    </section>
+    <section id='charing-cross'>
+        <h3>Insert Title</h3>
+        <p>Insert Paragraph Here</p>
+        <small id="citation">
+            Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a>
+        </small>
+    </section>-->
+</div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FtYW4iLCJhIjoiY2lzajQ2N2YzMDF4cjJ1cHVsdzd1b2ZlOCJ9.K6uUaMmeJ16TFmaORHcp0g';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/gaman/cjcka3qqg7gir2soe02jlb9rl',
+    /*center: [-0.15591514, 51.51830379],
+    zoom: 15.5,
+    bearing: 27,
+    pitch: 45*/
+});
+var chapters = {
+    'baker': {
+        bearing: 27,
+        center: [73.690,24.569],
+        zoom: 12.9,
+        pitch: 20
+    },
+    'aldgate': {
+        duration: 6000,
+        center: [72.811,18.910],
+        bearing: 150,
+        zoom: 15,
+        pitch: 0
+    },
+    'london-bridge': {
+        bearing: 90,
+        center: [72.832,18.966],
+        zoom: 13,
+        speed: 0.6,
+        pitch: 0
+    },
+    'woolwich': {
+        bearing: 0,
+        center: [68.324,13.852],
+        zoom: 3.4
+    },
+    'gloucester': {
+        bearing: 45,
+        center: [-0.18335806, 51.49439521],
+        zoom: 15.3,
+        pitch: 20,
+        speed: 0.5
+    },
+    'caulfield-gardens': {
+        bearing: 180,
+        center: [-0.19684993, 51.5033856],
+        zoom: 12.3
+    },
+    'telegraph': {
+        bearing: 90,
+        center: [-0.10669358, 51.51433123],
+        zoom: 17.3,
+        pitch: 40
+    },
+    'charing-cross': {
+        bearing: 90,
+        center: [-0.12416858, 51.50779757],
+        zoom: 14.3,
+        pitch: 20
+    }
+};
+// On every scroll event, check which element is on screen
+window.onscroll = function() {
+    var chapterNames = Object.keys(chapters);
+    for (var i = 0; i < chapterNames.length; i++) {
+        var chapterName = chapterNames[i];
+        if (isElementOnScreen(chapterName)) {
+            setActiveChapter(chapterName);
+            break;
+        }
+    }
+};
+var activeChapterName = 'baker';
+function setActiveChapter(chapterName) {
+    if (chapterName === activeChapterName) return;
+    map.flyTo(chapters[chapterName]);
+    document.getElementById(chapterName).setAttribute('class', 'active');
+    document.getElementById(activeChapterName).setAttribute('class', '');
+    activeChapterName = chapterName;
+}
+function isElementOnScreen(id) {
+    var element = document.getElementById(id);
+    var bounds = element.getBoundingClientRect();
+    return bounds.top < window.innerHeight && bounds.bottom > 0;
+}
+</script>
+
+</body>
+</html>
