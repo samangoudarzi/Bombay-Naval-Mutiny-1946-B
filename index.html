@@ -19,8 +19,6 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FtYW4iLCJhIjoiY2lzajQ2N2YzMDF4cjJ1cHVsdzd1b
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v9',
-    zoom: 13,
-    center: [-122.447303, 37.753574]
 });
 
 map.on('load', function () {
@@ -29,7 +27,7 @@ map.on('load', function () {
         "id": "terrain-data",
         "type": "line",
         "source": {
-            type: 'vector',
+            type: 'raster',
             url: 'mapbox://gaman.dh368k0z'
         },
 });
