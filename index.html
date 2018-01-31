@@ -161,6 +161,16 @@ window.onscroll = function() {
         }
     }
 };
+window.onclick = function() {
+    var chapterNames = Object.keys(chapters);
+    for (var i = 0; i < chapterNames.length; i++) {
+        var chapterName = chapterNames[i];
+        if (isElementOnScreen(chapterName)) {
+            setActiveChapter(chapterName);
+            break;
+        }
+    }
+};
 var activeChapterName = 'baker';
 function setActiveChapter(chapterName) {
     if (chapterName === activeChapterName) return;
@@ -181,7 +191,7 @@ $(function() {
         if (target.length) {
             $('html,body').animate({
               scrollTop: target.offset().top
-            },);
+            }, 1000);
             return false;
         }
     });
