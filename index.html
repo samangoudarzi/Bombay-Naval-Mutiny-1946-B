@@ -37,13 +37,10 @@ section:last-child {
     </section>
     <section id='E1001a'>
         <h3>08-02-1946; 0915</h3>
-        <img src="E1001a.jpg" alt="E1001a">
+        <img src="https://drive.google.com/file/d/1VcxPn1kyZk1EGoZ4zDJNMYgwp3FLQIzc/view?usp=sharing"> 
     </section>
     <section id='E1001b'>
-        <img src="E1001b.jpg" alt="E1001b">
-    </section>
-     <section id='E1001c'>
-        <img src="E1001c.jpg" alt="E1001c">
+        <p></p>
     </section>
     <section id='woolwich'>
         <h3>Telegram Sent</h3>
@@ -71,7 +68,6 @@ section:last-child {
     </section>
 </div>
 <script>
-
 mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FtYW4iLCJhIjoiY2lzajQ2N2YzMDF4cjJ1cHVsdzd1b2ZlOCJ9.K6uUaMmeJ16TFmaORHcp0g';
 var map = new mapboxgl.Map({
     container: 'map',
@@ -91,8 +87,6 @@ map.on('load', function() {
     maxzoom: 22
   });
 });
-
-
 var chapters = {
     'Start': {
         bearing: 27,
@@ -103,19 +97,16 @@ var chapters = {
     'E1001a': {
         duration: 6000,
         center: [72.826,18.917],
-        bearing: 0,
+        bearing: 150,
         zoom: 17.5,
         pitch: 0
     },
     'E1001b': {
-        center: [67.102,24.889],
-        zoom: 14,
-        speed: 0.5,
+        bearing: 90,
+        center: [72.832,18.966],
+        zoom: 13,
+        speed: 0.6,
         pitch: 0
-    },
-    'E1001c': {
-        center: [67.102,24.889],
-        zoom: 14
     },
     'woolwich': {
         bearing: 0,
