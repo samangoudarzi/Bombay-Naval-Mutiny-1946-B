@@ -32,18 +32,15 @@ section:last-child {
 <div id='map'></div>
 <div id='features'>
   
-<section id='baker' class='active'>
-        <h3>Godfrey</h3>
-        <p>General Godfrey's diary" 'As we drew into Udaipur Station I noticed an RAF plane in the airfield, This looked a bit ominous and my apprehensions were confirmed when I Saw Kirkbride, the Resident, Standing On A platform with a sealed envelope in his hand.</p>
-        <img src='https://upload.wikimedia.org/wikipedia/en/e/e6/RIN_HMIS_Hindustan.jpg' width="500">
+<section id='Start' class='active'>
+        <h3>Please Scroll Down to Start the Story</h3>
     </section>
-    <section id='aldgate'>
-        <h3>HMIS Talwar Uprising</h3>
-        <p>On the 21st of January 1946, the Commanding Officer of Talwar, Lieut Commander Cole was relieved by Commander King. Similar slogans again appeared in the night of the 1st/2nd February 1946.</p>
+    <section id='E1001a'>
+        <h3>08-02-1946; 0915</h3>
+        <img src="https://drive.google.com/file/d/1VcxPn1kyZk1EGoZ4zDJNMYgwp3FLQIzc/view?usp=sharing"> 
     </section>
-    <section id='london-bridge'>
-        <h3>J.J. Hospital Junction</h3>
-        <p>British troops went into action for the first time at about 1 pm today near JJ Hospital junction. They fired several rounds to disperse a riotous and menacing mob which was throwing stones.</p>
+    <section id='E1001b'>
+        <p></p>
     </section>
     <section id='woolwich'>
         <h3>Telegram Sent</h3>
@@ -94,20 +91,20 @@ map.on('load', function() {
 
 
 var chapters = {
-    'baker': {
+    'Start': {
         bearing: 27,
-        center: [73.690,24.569],
-        zoom: 12.9,
+        center: [72.826,18.928],
+        zoom: 12.8,
         pitch: 20
     },
-    'aldgate': {
+    'E1001a': {
         duration: 6000,
-        center: [72.811,18.910],
+        center: [72.826,18.917],
         bearing: 150,
-        zoom: 15,
+        zoom: 17.5,
         pitch: 0
     },
-    'london-bridge': {
+    'E1001b': {
         bearing: 90,
         center: [72.832,18.966],
         zoom: 13,
