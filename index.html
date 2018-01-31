@@ -101,17 +101,26 @@ map.on('load', function() {
 });
 var chapters = {
     'baker': {
-        bearing: 27,
-        center: [73.690,24.569],
-        zoom: 12.9,
-        pitch: 20
+       bearing: 27,
+        center: [72.826,18.928],
+        zoom: 12.8,
     },
     'E1001a': {
         duration: 6000,
-        center: [72.811,18.910],
-        bearing: 150,
-        zoom: 15,
+        center: [72.826,18.917],
+        bearing: 0,
+        zoom: 17.5,
         pitch: 0
+    },
+    'E1001b': {
+        center: [67.102,24.889],
+        zoom: 14,
+        speed: 0.5,
+        pitch: 0
+    },
+    'E1001c': {
+        center: [67.102,24.889],
+        zoom: 14
     },
     'london-bridge': {
         bearing: 90,
@@ -171,6 +180,7 @@ body.onclick = function() {
         }
     }
 };
+var activeChapterName = 'baker';
 function setActiveChapter(chapterName) {
     if (chapterName === activeChapterName) return;
     map.flyTo(chapters[chapterName]);
