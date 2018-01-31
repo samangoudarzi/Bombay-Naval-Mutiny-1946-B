@@ -5,6 +5,7 @@
 #features {
     width: 50%;
     margin-left: 50%;
+    color: black;
     font-family: sans-serif;
     overflow-y: scroll;
     background-color: #fafafa;
@@ -20,3 +21,6 @@ img {
 a {
     text-decoration:none;
    }
+a-visited{
+    color: black;
+}
