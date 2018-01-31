@@ -88,6 +88,10 @@ map.on('load', function() {
     maxzoom: 22
   });
 });
+  $('section').on('click', function(e){
+  e.preventDefault();
+  window.location.href=$(this).data('link');
+})
 var chapters = {
     'baker': {
         bearing: 27,
