@@ -42,10 +42,6 @@ section:last-child {
         <h3>08-02-1946; 0915</h3>
             <img src="E1001a.jpg" alt="E1001a">
         </a></section>
-    <section id='london-bridge'>
-        <h3>J.J. Hospital Junction</h3>
-        <p>British troops went into action for the first time at about 1 pm today near JJ Hospital junction. They fired several rounds to disperse a riotous and menacing mob which was throwing stones.</p>
-    </section>
     <section id='E1001b'>
         <a href="#E1001b">
         <img src="E1001b.jpg" alt="E1001b">
@@ -161,16 +157,6 @@ var chapters = {
 };
 // On every scroll event, check which element is on screen
 window.onscroll = function() {
-    var chapterNames = Object.keys(chapters);
-    for (var i = 0; i < chapterNames.length; i++) {
-        var chapterName = chapterNames[i];
-        if (isElementOnScreen(chapterName)) {
-            setActiveChapter(chapterName);
-            break;
-        }
-    }
-};
-body.onclick = function() {
     var chapterNames = Object.keys(chapters);
     for (var i = 0; i < chapterNames.length; i++) {
         var chapterName = chapterNames[i];
