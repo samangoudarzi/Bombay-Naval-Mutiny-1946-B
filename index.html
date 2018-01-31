@@ -150,6 +150,9 @@ window.onscroll = function() {
         }
     }
 };
+$('section').on('click', function(e){
+window.location.href=$(this).data('link');
+})
 var activeChapterName = 'baker';
 function setActiveChapter(chapterName) {
     if (chapterName === activeChapterName) return;
