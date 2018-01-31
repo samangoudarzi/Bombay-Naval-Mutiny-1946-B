@@ -9,6 +9,9 @@
     overflow-y: scroll;
     background-color: #fafafa;
 }
+#section {
+  cursor: pointer;
+}
 img {
     align-items: center;
     max-width: 100%;
