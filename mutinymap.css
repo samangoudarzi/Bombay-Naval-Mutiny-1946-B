@@ -21,6 +21,6 @@ img {
 a {
     text-decoration:none;
    }
-a-visited{
+a:visited{
     color: black;
 }
