@@ -116,18 +116,16 @@ var map = new mapboxgl.Map({
 });
 
 map.on('load', function() {
-    map.addLayer({
-        'id': 'wms-test-layer',
-        'type': 'raster',
-        'source': {
-            'type': 'raster',
-            'tiles': [
-                'https://geodata.state.nj.us/imagerywms/Natural2015?bbox={bbox-epsg-3857}&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&width=256&height=256&layers=Natural2015'
-            ],
-            'tileSize': 256
-        },
-        'paint': {}
-    }, 'aeroway-taxiway');
+  map.addLayer({
+    id: 'raster-layer',
+    type: 'raster',
+    source: {
+      type: 'raster',
+      tiles: ['https://api.mapbox.com/v4/<gaman.dh368k0z>/{z}/{x}/{y}.png?access_token=<pk.eyJ1IjoiZ2FtYW4iLCJhIjoiY2lzajQ2N2YzMDF4cjJ1cHVsdzd1b2ZlOCJ9.K6uUaMmeJ16TFmaORHcp0g>'],
+    },
+    minzoom: 14,
+    maxzoom: 22
+  });
 });
     
 var chapters = {
