@@ -166,17 +166,6 @@ window.onscroll = function() {
         }
     }
 };
-document.onclick = function() {
-    var chapterNames = Object.keys(chapters);
-    for (var chapterName){
-    /*for (var i = 0; i < chapterNames.length; i++) {
-        var chapterName = chapterNames[i];*/
-        if (isElementOnScreen(chapterName)) {
-            setActiveChapter(chapterName);
-            break;
-        }
-   }
-};
 
 var activeChapterName = 'baker';
 function setActiveChapter(chapterName) {
