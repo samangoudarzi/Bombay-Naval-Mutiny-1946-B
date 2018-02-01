@@ -186,7 +186,7 @@ $(function() {
         target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
         if (target.length) {
             $('html,body').animate({
-              scrollTop: target.offset().top + target.innerHeight(true)
+              scrollTop: (target.offset().top) + 2000
             }, 50);
             return false;
         }
