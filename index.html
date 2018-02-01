@@ -33,15 +33,13 @@ section:last-child {
 <div id='map'></div>
 <div id='features'>
   
-<section id='baker' class='active'>
-    <a href="#baker">
-        <h3>Please Scroll Down to Start the Story</h3></a>
-    </section>
-    <section id='E1001a'>
-        <a href="#E1001a">
+<a href="#baker"><section id='baker' class='active'>
+        <h3>Please Scroll Down to Start the Story</h3>
+    </section></a>
+   <a href="#E1001a"> <section id='E1001a'>
         <h3>08-02-1946; 0915</h3>
             <img src="E1001a.jpg" alt="E1001a">
-        </a></section>
+        </section></a>
     <section id='E1001b'>
         <a href="#E1001b">
         <img src="E1001b.jpg" alt="E1001b">
@@ -182,7 +180,7 @@ function isElementOnScreen(id) {
 }
 $('a[href*=#]').click(function(event){
     $('html, body').animate({
-        scrollTop: ($( $.attr(this, 'href') ).offset().top)+500
+        scrollTop: $( $.attr(this, 'href') ).offset().top
     }, 500);
     event.preventDefault();
 });
