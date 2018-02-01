@@ -122,7 +122,7 @@ map.on('load', function() {
         'source': {
             'type': 'raster',
             'tiles': [
-                'http://mapwarper.net/maps/tile/26881/{z}/{x}/{y}.png'
+                'http://mapwarper.net/maps/wms/26881?request=GetMap&version=1.1.1&styles=&format=image/png&srs={proj}&exceptions=application/vnd.ogc.session.inimage&width={width}&height={height}&BBOX={bbox}&'
             ],
             'tileSize': 256
         },
