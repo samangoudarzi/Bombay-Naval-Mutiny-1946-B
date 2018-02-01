@@ -114,18 +114,7 @@ var map = new mapboxgl.Map({
     center: [72.834,18.949],
     zoom: 12,
 });
-map.on('load', function() {
-  map.addLayer({
-    id: 'raster-layer',
-    type: 'raster',
-    source: {
-      type: 'raster',
-      tiles: ['https://api.mapbox.com/v4/<gaman.dh368k0z>/{z}/{x}/{y}.png?access_token=<pk.eyJ1IjoiZ2FtYW4iLCJhIjoiY2lzajQ2N2YzMDF4cjJ1cHVsdzd1b2ZlOCJ9.K6uUaMmeJ16TFmaORHcp0g>'],
-    },
-    minzoom: 14,
-    maxzoom: 22
-  });
-});
+    
 var chapters = {
     'Start': {
        bearing: 0,
