@@ -33,7 +33,7 @@ section:last-child {
 <div id='map'></div>
 <div id='features'>
   
-<a href="#baker"><section id='baker' class='active'>
+<a href="#Start"><section id='Start' class='active'>
         <h3>Please Scroll Down to Start the Story</h3>
     </section></a>
    <a href="#E1001a"> <section id='E1001a'>
@@ -94,7 +94,7 @@ map.on('load', function() {
   });
 });
 var chapters = {
-    'baker': {
+    'Start': {
        bearing: 27,
         center: [72.826,18.928],
         zoom: 12.8,
@@ -165,7 +165,7 @@ window.onscroll = function() {
     }
 };
 
-var activeChapterName = 'baker';
+var activeChapterName = 'Start';
 function setActiveChapter(chapterName) {
     if (chapterName === activeChapterName) return;
     map.flyTo(chapters[chapterName]);
