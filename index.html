@@ -115,18 +115,20 @@ var map = new mapboxgl.Map({
     zoom: 12,
 });
 
-/*map.on('load', function() {
-  map.addLayer({
-    id: 'raster-layer',
-    type: 'raster',
-    source: {
-      type: 'raster',
-      tiles: ['https://api.mapbox.com/v4/<gaman.dh368k0z>/{z}/{x}/{y}.png?access_token=<pk.eyJ1IjoiZ2FtYW4iLCJhIjoiY2lzajQ2N2YzMDF4cjJ1cHVsdzd1b2ZlOCJ9.K6uUaMmeJ16TFmaORHcp0g>'],
-    },
-    minzoom: 14,
-    maxzoom: 22
-  });
-});*/
+map.on('load', function() {
+    map.addLayer({
+        'id': 'wms-layer',
+        'type': 'raster',
+        'source': {
+            'type': 'raster',
+            'tiles': [
+                'http://mapwarper.net/maps/tile/26881/{z}/{x}/{y}.png'
+            ],
+            'tileSize': 256
+        },
+        'paint': {}
+    }, 'aeroway-taxiway');
+});
     
 var chapters = {
     'Start': {
