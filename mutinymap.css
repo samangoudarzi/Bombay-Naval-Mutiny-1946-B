@@ -29,6 +29,7 @@ a:visited{
   overflow: hidden;
   background-color: #333;
   position: fixed;
+  width: 100%;
 }
 
 /* Navbar links */
