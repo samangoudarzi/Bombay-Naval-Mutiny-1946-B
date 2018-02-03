@@ -6,7 +6,7 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <link href='mutinymap.css' rel='stylesheet' />
     <script src="jquery.min.js"></script>
-   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet' />
     <style>
         /*body { margin:0; padding:0; }*/
@@ -15,7 +15,7 @@
 </head>
 <body>
  <style>
-/*section {
+section {
     padding:  5px 25px;
     line-height: 25px;
     border-bottom: 1px solid #ddd;
@@ -27,7 +27,7 @@ section.active {
 }
 section:last-child {
     border-bottom: none;
-    margin-bottom: 5px;*/
+    margin-bottom: 5px;
 }
 </style>
 <div id='map'></div>
@@ -169,112 +169,40 @@ A similar situation developed in the ships that night. There were some sixty nav
        <p> Insert description here.</p>
        <!--<figure our image to be added>-->
         </section></a>
+    <a href="#E1040"><section id='E1040'>
+       <h3>Date; Time</h3>
+       <p> Insert description here.</p>
+       <!--this event has no image-->
+        </section></a>
     <a href="#E1042"><section id='E1042'>
        <h3>Date; Time</h3>
        <p> Insert description here.</p>
-       <!--<img src="E1042.jpg" alt="E1042">-->
-        </section></a>
-     <a href="#E1042A"><section id='E1042A'>
-       <h3>Date; Time</h3>
-       <p> Insert description here.</p>
-       <!--<img src="E1042A.jpg" alt="E1042A">-->
-        </section></a>
-      <a href="#E1043"><section id='E1043'>
-       <h3>Date; Time</h3>
-       <p> Insert description here.</p>
-       <!--<img src="E1043.jpg" alt="E1043">-->
-        </section></a>
-      <a href="#E1044"><section id='E1044'>
-       <h3>Date; Time</h3>
-       <p> Insert description here.</p>
-       <!--<figure our image to be added>-->
-        </section></a>
-       <a href="#E1045"><section id='E1045'>
-       <h3>Date; Time</h3>
-       <p> Insert description here.</p>
-       <!--<img src="E1045.jpg" alt="E1045">-->
-        </section></a>
-      <a href="#E1047"><section id='E1047'>
-       <h3>Date; Time</h3>
-       <p> Insert description here.</p>
-       <!--<img src="E1047.jpg" alt="E1047">-->
-        </section></a>
-      <a href="#E1048"><section id='E1048'>
-       <h3>Date; Time</h3>
-       <p> Insert description here.</p>
-       <!--<img src="E1048.jpg" alt="E1048">-->
-        </section></a>
-      <a href="#E1050"><section id='E1050'>
-       <h3>Date; Time</h3>
-       <p> Insert description here.</p>
-       <!--<img src="E1050.jpg" alt="E1050">-->
-        </section></a>
-      <a href="#E1053"><section id='E1053'>
-       <h3>Date; Time</h3>
-       <p> Insert description here.</p>
        <!--this event has no image-->
         </section></a>
-      <a href="#E1054"><section id='E1054'>
-       <h3>Date; Time</h3>
-       <p> Insert description here.</p>
-       <!--this event has no image-->
-          </section></a>
-        <a href="#E1056"><section id='E1056'>
-       <h3>Date; Time</h3>
-       <p> Insert description here.</p>
-       <!--<img src="E1056.jpg" alt="E1056">-->
-        </section></a>
-      <a href="#E1057"><section id='E1057'>
-       <h3>Date; Time</h3>
-       <p> Insert description here.</p>
-       <!--<img src="E1057.jpg" alt="E1057">-->
-        </section></a>
-     <a href="#E1058"><section id='E1058'>
-       <h3>Date; Time</h3>
-       <p> Insert description here.</p>
-       <!--<img src="E1058.jpg" alt="E1058">-->
-        </section></a>
-     <a href="#E1060"><section id='E1060'>
-       <h3>Date; Time</h3>
-       <p> Insert description here.</p>
-       <!--<img src="E1060.jpg" alt="E1060">-->
-        </section></a>
-    <h3></h3>
-       <p></p>
-     <h3></h3>
-       <p></p>
-     <h3></h3>
-       <p></p>
-     <h3></h3>
-       <p></p>
-     <h3></h3>
-       <p></p>
-     <h3></h3>
-       <p></p>
-     <h3></h3>
-       <p></p>
 </div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FtYW4iLCJhIjoiY2lzajQ2N2YzMDF4cjJ1cHVsdzd1b2ZlOCJ9.K6uUaMmeJ16TFmaORHcp0g';
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
+    style: 'mapbox://styles/gaman/cjcspd02i0cnh2sntpdsvuusm',
     center: [72.834,18.949],
     zoom: 12,
 });
- map.addLayer({
-    'id': 'warper-layer',
-    'type': 'raster',
-    'source': {
-      'type': 'raster',
-      'tiles': [
-        'http://mapwarper.net/maps/tile/2/{z}/{x}/{y}.png'
-      ]
-    }
-  });
-
+map.on('load', function() {
+    map.addLayer({
+        'id': 'wms-layer',
+        'type': 'raster',
+        'source': {
+            'type': 'raster',
+            'tiles': [
+                'http://mapwarper.net/maps/tile/26881/330/100/100.png '
+            ],
+        },
+        'paint': {}
+    }, 'aeroway-taxiway');
+});
     
-/*var chapters = {
+var chapters = {
     'Start': {
        bearing: 0,
         center: [72.826,18.928],
@@ -400,120 +328,6 @@ var map = new mapboxgl.Map({
         zoom: 15,
         pitch: 0
     },
-         'E1032': {
-        bearing: 0,
-        center: [72.836156,18.931832],
-        zoom: 15,
-        pitch: 0
-    },
-           'E1033': {
-        bearing: 0,
-        center: [72.840487,18.931905],
-        zoom: 15,
-        pitch: 0
-    },
-          'E1035': {
-        bearing: 0,
-        center: [72.840487,18.931905],
-        zoom: 15,
-        pitch: 0
-    },
-     'E1036': {
-        bearing: 0,
-        center: [72.841214,18.933490],
-        zoom: 15,
-        pitch: 0
-    },
-         'E1040': {
-        bearing: 0,
-        center: [72.834688,18.919220],
-        zoom: 15,
-        pitch: 0
-    },
-      'E1042': {
-        bearing: 0,
-        center: [72.825808,18.916782],
-        zoom: 15,
-        pitch: 0
-    },
-       'E1042A': {
-        bearing: 0,
-        center: [72.840487,18.931905],
-        zoom: 15,
-        pitch: 0
-    },
-        'E1043': {
-        bearing: 0,
-        center: [72.984709,19.236753],
-        zoom: 15,
-        pitch: 0
-    },
-     'E1044': {
-        bearing: 0,
-        center: [72.825808,18.916782],
-        zoom: 15,
-        pitch: 0
-    },
-        'E1045': {
-        bearing: 0,
-        center: [72.848217,19.014390],
-        zoom: 15,
-        pitch: 0
-    },
-    'E1047': {
-        bearing: 0,
-        center: [72.812649,18.954512],
-        zoom: 15,
-        pitch: 0
-    },
-      'E1048': {
-        bearing: 0,
-        center: [72.840487,18.931905],
-        zoom: 15,
-        pitch: 0
-    },
-          'E1050': {
-        bearing: 0,
-        center: [72.840487,18.931905],
-        zoom: 15,
-        pitch: 0
-    },
-           'E1053': {
-        bearing: 0,
-        center: [72.840487,18.931905],
-        zoom: 15,
-        pitch: 0
-    },
-         'E1054': {
-        bearing: 0,
-        center: [72.840208,19.025366],
-        zoom: 15,
-        pitch: 0
-    },
-          'E1056': {
-        bearing: 0,
-        center: [72.8229,18.951929],
-        zoom: 15,
-        pitch: 0
-    },
-           'E1057': {
-        bearing: 0,
-        center: [72.837532,19.054776],
-        zoom: 15,
-        pitch: 0
-    },
-               'E1058': {
-        bearing: 0,
-        center: [72.840487,18.931905],
-        zoom: 15,
-        pitch: 0
-    },
-        'E1060': {
-        bearing: 0,
-        center: [72.840487,18.931905],
-        zoom: 15,
-        pitch: 0
-    },
     'charing-cross': {
         bearing: 90,
         center: [-0.12416858, 51.50779757],
@@ -551,7 +365,6 @@ $('a[href*=#]').click(function(event){
     }, 500);
     event.preventDefault();
 });
-} 
 </script>
 
 </body>
