@@ -15,7 +15,7 @@
 </head>
 <body>
  <style>
-section {
+/*section {
     padding:  5px 25px;
     line-height: 25px;
     border-bottom: 1px solid #ddd;
@@ -27,7 +27,7 @@ section.active {
 }
 section:last-child {
     border-bottom: none;
-    margin-bottom: 5px;
+    margin-bottom: 5px;*/
 }
 </style>
 <div id='map'></div>
@@ -262,7 +262,7 @@ var map = new mapboxgl.Map({
     center: [72.834,18.949],
     zoom: 12,
 });
-      map.addLayer({
+ map.addLayer({
     'id': 'warper-layer',
     'type': 'raster',
     'source': {
@@ -274,7 +274,7 @@ var map = new mapboxgl.Map({
   });
 
     
-var chapters = {
+/*var chapters = {
     'Start': {
        bearing: 0,
         center: [72.826,18.928],
@@ -551,22 +551,6 @@ $('a[href*=#]').click(function(event){
     }, 500);
     event.preventDefault();
 });
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
-
-// Get the navbar
-var navbar = document.getElementById("navbar");
-
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
 } 
 </script>
 
