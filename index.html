@@ -1,359 +1,354 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8' />
-    <title>test</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <link href='mutinymap.css' rel='stylesheet' />
-    <script src="jquery.min.js"></script>
+    <meta name="description" content="Insurrection 1946, Bombay, Naval, Mutiny, Bombay Naval Mutiny, 1946">
+    <meta name="author" content="samangoudarzi">
+    <title>Insurrection 1946 - Map of Bombay</title>
+    <link href='css/style.css' rel='stylesheet' />
+    <!-- Mapbox API -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        /*body { margin:0; padding:0; }*/
-        #map { position:fixed; top:0; bottom:0; width:50%;}
-    </style>
+    <!-- Google Fonts API -->
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+    <!-- Lightbox -->
+    <link href="css/lightbox.css" rel="stylesheet">
 </head>
 <body>
- <style>
-section {
-    padding:  5px 25px;
-    line-height: 25px;
-    border-bottom: 1px solid #ddd;
-    opacity: 0.25;
-    font-size: 13px;
-}
-section.active {
-    opacity: 1;
-}
-section:last-child {
-    border-bottom: none;
-    margin-bottom: 5px;
-}
-</style>
 <div id='map'></div>
 <div id='features'>
     <div id="navbar">
-        <a href="http://insurrection1946.in/"><img src="logo-1.png" alt="insurrection1946"></a>
-        <div id=m> <a href="Start">Bombay</a>
-        <a href="">South Asia</a>
-        <a href="">Empire</a></div>
-    </div> 
-<a href="#Start"><section id='Start' class='active'>
-        <h3>This is my description Please Scroll Down to Start the Story</h3>
+        <div id="logo" style="clear:both">
+            <a href="index.html"><img src="img/insurrection1946_logo.png" alt="Insurrection 1946"></a>
+        </div>
+        <div id="nav">
+            <div id="navlinks"> 
+                <a href="index.html">Bombay</a>
+                <a href="south-asia.html">South Asia</a>
+                <a href="british-empire.html">British Empire</a>
+                <a href="http://insurrection1946.in/" target="_blank">The Exhibition</a>
+                <a href="#about">About the Map</a>
+            </div>
+            <div id="desc">
+                <h1>Map of Bombay</h1>
+                <p>On 18 February 1946, a mutiny was declared on the HMIS Talwar, the Signal Training Establishment of the Royal Indian Navy, at Colaba, Bombay. A total of around 10,000 naval ratings took charge of 66 ships and on-shore naval establishments. On the fourth day of the strike the city’s industrial workers joined the struggle, and Bombay closed down. The curfew that followed ended with over 200 people killed on the streets. Ranged against the strikers was the might of the British armed forces, on sea, air and land, threatening ‘if necessary’ to wipe out the Navy.</p>
+                <p>It lasted six days. Widely considered a 'failure' in its time, seventy years on, the naval insurrection refuses to be assimilated into any single narrative of history. It was a challenge to the Empire, shaking up a British patrician state and an imperial order, the full might of which was on display in the events that took place in Bombay. These maps move, in a progressively expanding narrative, from the events in the city to those in India and the British Empire.</p>
+                <p>Please scroll down to follow the events.</p>
+            </div>
+        </div>
+    </div>
+    <a href="#Start"><section id='Start' class='active'>
     </section></a>
     <a href="#E1002"><section id='E1002'>
-          <h3>15-02-1946; 1000</h3>
+        <h1>February 15, 1946 HMIS Talwar 1000</h1>
         <p>Seven days passed. Nothing happened. The CO did not even bother to heed his brother officer's advice. He deferred the hearing till Saturday, the normal day for such work.</p>
-        <img src="E1002.jpg" alt="E1002">
-        </section></a>
-     <a href="#E1003"><section id='E1003'>
-           <h3>16-02-1946; 0900</h3>
-         <p>On February 16, the fourteen ratings were called to the office of the CO. He was not in a mood to listen to them. He simply warned them against making false complaints and gave them twenty four hours to think it over, after which they could submit their complaints in writing.</p>
-         <img src="E1003.jpg" alt="E1003">
-        </section></a>
-   <a href="#E1004a"><section id='E1004a'>
-           <h3>18-02-1946; 0700</h3>
-       <p> Food was bad again. The dal was worse than the previous day's. It had been badly cooked, there was no salt in it, it had not even been boiled properly. Everyone walked out of the mess in silent protest.</p>
-         <img src="E1004a.jpg" alt="E1004a">
-        </section></a>
+        <a href="img/E1002.jpg" data-lightbox="image-1"><img src="img/E1002.jpg" alt="E1002"></a>
+    </section></a>
+    <a href="#E1003"><section id='E1003'>
+        <h1>February 16, 1946 HMIS Talwar 0900</h1>
+        <p>On February 16, the fourteen ratings were called to the office of the CO. He was not in a mood to listen to them. He simply warned them against making false complaints and gave them twenty four hours to think it over, after which they could submit their complaints in writing.</p>
+        <a href="img/E1003.jpg" data-lightbox="image-1"><img src="img/E1003.jpg" alt="E1003"></a>
+    </section></a>
+    <a href="#E1004a"><section id='E1004a'>
+        <h1>February 18, 1946 HMIS Talwar 0700</h1>
+        <p> Food was bad again. The dal was worse than the previous day's. It had been badly cooked, there was no salt in it, it had not even been boiled properly. Everyone walked out of the mess in silent protest.</p>
+        <a href="img/E1004a.jpg" data-lightbox="image-1"><img src="img/E1004a.jpg" alt="E1004a"></a>
+    </section></a>
     <a href="#E1005"><section id='E1005'>
-        <h3>18-02-1946; 0830</h3>
+        <h1>February 18, 1946 HMIS Talwar, Chowpatty, Castle Barracks 0830</h1>
         <p> At 8:30 a.m. the daily morning inspection for divisions (parade) was piped. But not a soul, except a few Chief Petty Officers and Petty Officers turned up on parade. At the Remote Control Office, the most important branch of the RIN for its day-to-day administration, the ratings came in for their usual morning class. Then they heard of the strike of the CCO ratings. They too walked out and there was no one on parade at 9:30 a.m.</p>
-        <img src="E1005b.jpg" alt="E1005b">
+        <a href="img/E1005b.jpg" data-lightbox="image-1"><img src="img/E1005b.jpg" alt="E1005b"></a>
         </section></a>
     <a href="#E1007"><section id='E1007'>
-          <h3>18-02-1946; 1800</h3>
+        <h1>February 18, 1946 HMIS Talwar 1800</h1>
         <p>By the evening the news of the strike in HMIS Talwar had spread all over India. The AIR news bulletins had broadcast the story. All the ships in Bombay harbour and the shore establishments had also heard that their comrades in the Talwar were fighting for their legitimate rights. There was excitement everywhere. At Castle Barracks, at Fort Barracks and other shore establishments the ratings gathered in small groups and discussed the situation; it was something new, something unheard of. Yes, there had been strikes before but this seemed different, this seemed to be the beginning of a real big battle. The humiliation, the discrimination, the suffering must be put an end to for all time. The people of the country would help them. They would be free. Something had to be done to support the Talwar ratings. But what?</p>
-        <img src="E1007.JPG" alt="E1007">
+        <a href="img/E1007.JPG" data-lightbox="image-1"><img src="img/E1007.JPG" alt="E1007"></a>
         </section></a>
     <a href="#E1008"><section id='E1008'>
-        <h3>19-02-1946; 0530</h3>
+        <h1>February 19, 1946 Fort Barracks, HMIS Talwar 0530</h1>
         <p>Fort Barracks. As usual, at 5:30 am the bugle sounded but not a soul stirred. Everyone inside the huge buildings heard it, but today these 350 souls were determined to defy the authorities. It was the beginning of their battle to avenge all insults. After some time the ratings got up. Already some of them were busy discussing their plans for the day. In small groups they argued. Others ran about looking for the morning papers. ‘What do the papers say? Has the strike spread everywhere? What is the news from the Talwar?’ With these questions they crowded the papers, reading the headlines, from behind one another’s shoulders. </p>
-        <img src="E1008a.jpg" alt="E1008a">
+        <a href="img/E1008a.jpg" data-lightbox="image-1"><img src="img/E1008a.jpg" alt="E1008a"></a>
         </section></a>
     <a href="#E1009"><section id='E1009'>
-        <h3>19-02-1946; 0630</h3>
-        <p>At 6.30 the bugle sounded again. Normally this was the time for the ratings to fall-in on the quarter-deck for ‘cleanship’ duty. But today the ratings laughed aloud. Nobody touched the brooms. They did not bother to make their beds. No. They were too busy discussing what they should do. Arguments. Heated discussions. Should they go on hunger strike? Why not take food outside? Words, words, words poured out in an unceasing stream. </p>
-         <img src="E1009.jpg" alt="E1009">
-        </section></a>
+        <h1>February 19, 1946 Fort Barracks 0630</h1>
+        <p>At 6.30 the bugle sounded again. Normally this was the time for the ratings to fall-in on the quarter-deck for ‘cleanship’ duty. But today the ratings laughed aloud. Nobody touched the brooms. They did not bother to make their beds. No. They were too busy discussing what they should do. Arguments. Heated discussions. Should they go on hunger strike? Why not take food outside? Words, words, words poured out in an unceasing stream.</p>
+         <a href="img/E1009.jpg" data-lightbox="image-1"><img src="img/E1009.jpg" alt="E1009"></a>
+    </section></a>
     <a href="#E1010"><section id='E1010'>
-        <h3>19-02-1946; 0900</h3>
+        <h1>February 19, 1946 Hornby Road, Fort 0900</h1>
         <p>As the speaker continued a rating brought a plate of dal and gave it to the speaker. He paused to look at it and continued: "You have seen one of our brothers bringing in the dal that has been prepared for our breakfast. It's just what we have been eating ever since we joined the service-foul- smelling, half-cooked and full of stones and husks. Now we must put an end to this. Now is the time to follow our brothers in the Talwar and refuse to take this food." The ratings cheered loudly. "Now, at this very moment, let us declare to the authorities that we too are going on hunger-strike. After this meeting let us form a procession and go to the Talwar to tell them that we too have joined the battle." The meeting broke up. "To the Talwar," they shouted as they went round the barracks, getting everyone together.</p>
-        <img src="E1010c.JPG" alt="E1010c">
+        <a href="img/E1010c.JPG" data-lightbox="image-1"><img src="img/E1010c.JPG" alt="E1010c"></a>
         </section></a>
     <a href="#E1011"><section id='E1011'>
-        <h3>19-02-1946; 1145</h3>
+        <h1>February 19, 1946 HMIS Punjab, HMIS Talwar 1145</h1>
         <p>They reached the Talwar at about 11:45 a.m.: The Talwar had become a very busy place. Ratings were pouring in from everywhere. As they entered they heard someone speaking through a loudspeaker. ''All ratings are requested to march straight to the parade ground. All civilians are asked to remain calm and wait outside. They must not try to come inside." The civilians obeyed. The ratings marched in. It was one mass of humanity.</p>
-        <img src="E1011.jpg" alt="E1011">
+        <a href="img/E1011.jpg" data-lightbox="image-1"><img src="img/E1011.jpg" alt="E1011"></a>
         </section></a>
      <a href="#E1012"><section id='E1012'>
-         <h3>19-02-1946; 1230</h3>
-         <p> At about 12:30 p.m. a meeting was called. All gathered round. One of the leaders of the Talwar Strike Committee spoke. He narrated all the events that had led up to the strike and the ratings listened quietly...These are the demands we propose to place before the authorities today: 1. Release all political prisoners including those of the INA; 2. Take action against Commander King, CO of the Talwar, for using insulting language against the ratings; 3. Speedy demobilisation and provision for resettlement in peace-time employment; 4. Same scale of pay, allowances, etc. as those of RN ratings; 5. Access to NAAFI canteens; 6. Better food; 7. No return of clothing kit at the time of release; and 8. Withdrawal of Indian troops from Indonesia.".</p>
-         <img src="E1012.jpg" alt="E1012">
-        </section></a>
+         <h1>February 19, 1946 HMIS Talwar 1230</h1>
+         <p> At about 12:30 p.m. a meeting was called. All gathered round. One of the leaders of the Talwar Strike Committee spoke. He narrated all the events that had led up to the strike and the ratings listened quietly...These are the demands we propose to place before the authorities today: 1. Release all political prisoners including those of the INA; 2. Take action against Commander King, CO of the Talwar, for using insulting language against the ratings; 3. Speedy demobilisation and provision for resettlement in peace-time employment; 4. Same scale of pay, allowances, etc. as those of RN ratings; 5. Access to NAAFI canteens; 6. Better food; 7. No return of clothing kit at the time of release; and 8. Withdrawal of Indian troops from Indonesia.</p>
+        <a href="img/E1012.jpg" data-lightbox="image-1"><img src="img/E1012.jpg" alt="E1012"></a>
+    </section></a>
     <a href="#E1013"><section id='E1013'>
-        <h3>19-02-1946; 1230</h3>
-        <p> The Akbar had a tradition of ‘trouble’. It was probably the worst administered establishment in the whole of the RIN. Corruption of various kinds seemed to flourish there. Only ads recently as in 1944 the Hindu and Muslim ratings together had struck work because the Muslim ratings were not given enough time to say their prayers. As a result, some 200 had been dismissed. But the spirit of revolt could not be crushed. It was only on the 19th that the news of the strike reached the Akbar. For about two hours there was wild excitement all over the establishment. Work virtually stopped. At about 12:30 p.m. the authorities decided to step in. A general parade was called. </p>
-        <img src="E1013.jpg" alt="E1013">
+        <h1>February 19, 1946 HMIS Akbar 1230</h1>
+        <p> The Akbar had a tradition of ‘trouble’. It was probably the worst administered establishment in the whole of the RIN. Corruption of various kinds seemed to flourish there. Only ads recently as in 1944 the Hindu and Muslim ratings together had struck work because the Muslim ratings were not given enough time to say their prayers. As a result, some 200 had been dismissed. But the spirit of revolt could not be crushed. It was only on the 19th that the news of the strike reached the Akbar. For about two hours there was wild excitement all over the establishment. Work virtually stopped. At about 12:30 p.m. the authorities decided to step in. A general parade was called.</p>
+        <a href="img/E1013.jpg" data-lightbox="image-1"><img src="img/E1013.jpg" alt="E1013"></a>
         </section></a>
     <a href="#E1014"><section id="E1014">
-        <h3>19-02-1946; 1400</h3>
+        <h1>February 19, 1946 HMIS Talwar, Colaba Receiving Station 1400</h1>
         <p>At about two in the afternoon some more ratings arrived at the Talwar. These new arrivals created somewhat of a sensation. Within a few minutes a procession was planned and once more, with Congress, League and Red flags, the ratings marched out of the Talwar. This time the procession was orderly arid disciplined... Going along the Colaba Causeway, they came to Flora Fountain, the centre of Bombay's business quarter, and returned to the Talwar along Back Bay.</p>
-        <img src="E1014.jpg" alt="E1014">
+        <a href="img/E1014.jpg" data-lightbox="image-1"><img src="img/E1014.jpg" alt="E1014"></a>
         </section></a>
      <a href="#E1015"><section id='E1015'>
-         <h3>19-02-1946; 1600</h3>
+         <h1>February 19, 1946 HMIS Talwar 1600</h1>
          <p> Rattray wanted to know what their grievances were. A spokesman of the Strike Committee presented him with a list of their demands...They demanded an explanation. Finally shortly after four, it was reported that Mrs. Asaf Ali could not come.</p>
-         <img src="E1015b.jpg" alt="E1015">
+         <a href="img/E1015b.jpg" data-lightbox="image-1"><img src="img/E1015b.jpg" alt="E1015"></a>
         </section></a>
     <a href="#E1016"><section id='E1016'>
-        <h3>19-02-1946;2120</h3>
+        <h1>February 19, 1946 Alexandra Docks, Fort Barracks 2120</h1>
         <p>Police report: 'At 9-20 pm the strikers in the Fort Barracks again started trouble by throwing stones. At 9.20 pm PC No7396/I was going to Fort Street from Alexandra Dock when the strikers from the Fort Barracks assaulted him with a stick. He was treated at the G.T. Hospital'.</p>
-        <img src="E1016.jpg" alt="E1016">
-        </section></a>
+        <a href="img/E1016.jpg" data-lightbox="image-1"><img src="img/E1016.jpg" alt="E1016"></a>
+    </section></a>
     <a href="#E1017"><section id='E1017'>
-         <h3>20-02-1946; 0100</h3>
+         <h1>February 20, 1946 Andheri Municipality 0100</h1>
          <p> At about 1 am, 12 lorries containing about 200 naval ratings came to Andheri from Jogeshwari side. They stopped near the Petrol Pump opposite the Andheri municipality and compelled the man in charge to supply them with 60 gallons of petrol without coupons and drove away leaving one of the lorries on the road as it was out of order.</p>
-         <img src="E1017.jpg" alt="E1017">
+         <a href="img/E1017.jpg" data-lightbox="image-1"><img src="img/E1017.jpg" alt="E1017"></a>
         </section></a>
      <a href="#E1018"><section id='E1018'>
-         <h3>20-02-1946; 0800</h3>
+         <h1>February 20, 1946 Castle Barracks 0800</h1>
          <p>The excitement of  the first day had worn a bit thin but there was an air of uncertainty everywhere. The Talwar was the hub of all activity and from every establishment and ship they began to concentrate there. Fort Barracks. The men got up early as usual. Today there were no bugles to wake them. It was their own day. They were themselves in command. Once again the morning started with arguments and discussions. The problem was food. Hunger strike was all right, but how were they going to fight? Would they not become weak from starvation? But eating food in their own mess was a difficult decision to take but then, they had no other alternative. Eating outside was an expensive business. Their pay was so low that they could not afford it. The senior ratings were so few that they could not undertake to bear the expenses of the others. So it was finally decided that they would cook food and eat it in their own mess. But would the cooks agree to cook the food? That was another problem. What about the strike? The cooks too were on strike. But they were persuaded. After all they were going to feed their comrades and keep them fighting fit. Moreover, quite a number of the ratings volunteered to help them and they all set to work. Breakfast over, they all dressed up in full uniform to go to the Talwar. In real naval style they marched out of their barracks, the three flags at the head. And they marched as if they were on ceremonial 'parade-the only difference was the flags at the head and the slogans that they shouted.</p>
-      <img src="E1018.jpg" alt="E1018">
-        </section></a>
-      <a href="#E1019"><section id='E1019'>
-         <h3>20-02-1946; 0900</h3>
-         <p> But what next? They must go to the Talwar. They must join their brethren. So at 9 a.m. 2000 of them set out for Bombay...Suddenly news came that HMIS Cheetah at Trombay had been surrounded by the military. </p>
-      <img src="E1019.jpg" alt="E1019">
-        </section></a>
-     <a href="#E1020"><section id='E1020'>
-         <h3>20-02-1946; 1100</h3>
+        <a href="img/E1018.jpg" data-lightbox="image-1"><img src="img/E1018.jpg" alt="E1018"></a>
+    </section></a>
+        <a href="#E1019"><section id='E1019'>
+         <h1>February 20, 1946 Castle Barracks 0900</h1>
+         <p> But what next? They must go to the Talwar. They must join their brethren. So at 9 a.m. 2000 of them set out for Bombay...Suddenly news came that HMIS Cheetah at Trombay had been surrounded by the military.</p>
+        <a href="img/E1019.jpg" data-lightbox="image-1"><img src="img/E1019.jpg" alt="E1019"></a>
+    </section></a>
+    <a href="#E1020"><section id='E1020'>
+         <h1>February 20, 1946 HMIS Talwar 1100</h1>
          <p>At the meeting of the strikers held at 11 am, M.S. Khan was appointed President of the Central Strike Committee by about 5,000 strikers who had collected at the Signal School at Wodehouse Road.</p>
-         <img src="E1020.jpg" alt="E1020">
-        </section></a>
-     <a href="#E1021"><section id='E1021'>
-         <h3>20-02-1946; 1130</h3>
-         <p>At 11.30 AM some naval pickets stopped a naval lorry conveying strikers near Mint Road.They asked the strikers to get off the lorry...strikers threw some stones but nobody was reported to have been injured. About this time, a RIN lorry which was going towards Colaba with a dozen strikers, took a sharp turn at the junction of Kitteridge Road and Colaba Road and turned turtle. </p>
-      <img src="E1021.jpg" alt="E1021">
-        </section></a>
+         <a href="img/E1020.jpg" data-lightbox="image-1"><img src="img/E1020.jpg" alt="E1020"></a>
+    </section></a>
+    <a href="#E1021"><section id='E1021'>
+         <h1>February 20, 1946 Mint Road, Fort 1130</h1>
+         <p>At 11.30 AM some naval pickets stopped a naval lorry conveying strikers near Mint Road.They asked the strikers to get off the lorry...strikers threw some stones but nobody was reported to have been injured. About this time, a RIN lorry which was going towards Colaba with a dozen strikers, took a sharp turn at the junction of Kitteridge Road and Colaba Road and turned turtle.</p>
+        <a href="img/E1021.jpg" data-lightbox="image-1"><img src="img/E1021.jpg" alt="E1021"></a>
+    </section></a>
     <a href="#E1022"><section id='E1022'>
-         <h3>20-02-1946; 1300</h3>
+         <h1>February 20, 1946 Wodehouse Road, Colaba 1300</h1>
          <p>At 1 PM, about 500 R.I.N. ratings marched from Bori Bunder to Wodehouse Road and dispersed. After 2 pm a batch of 300 ratings went to Churchgate Station and left for their camp at Jogeshwari.</p>
-      <!--this event has no image-->
-        </section></a>
+        <!--this event has no image-->
+    </section></a>
     <a href="#E1023"><section id='E1023'>
-         <h3>20-02-1946; 1530</h3>
+         <h1>February 20, 1946 Castle Barracks 1530</h1>
          <p>Very soon news began to pour in from different establishments of the arrival of military guards. At 3: 30 Maratha guards had already surrounded Castle Barracks. The men were cut off from the outside world. They were virtually prisoners. It was the same everywhere...Castle Barracks. The sight of the armed guards made the ratings furious. The offensive must be fought back. Why not break open the armoury and start fighting now? It was with great difficulty that the leading ratings persuaded the others to wait for instructions from the NCSC. After all they were fighting a joint battle. Sporadic actions would only help the enemy. Whatever they did they had to do it together....By this time Maratha guards had been posted at both the gates of the establishment. The ratings were angry but some of them spoke to the guards and found them quite sympathetic. They discovered more. The Marathas had not been told that they were being brought out to fight against their brothers in revolt. They had been told that a Hindu-Muslim conflict had broken out and that they were required to suppress the trouble. But now they were put wise and said that not one of them was going to fight against his own brothers.</p>
-        <img src="E1023.jpg" alt="E1023">
+        <a href="img/E1023.jpg" data-lightbox="image-1"><img src="img/E1023.jpg" alt="E1023"></a>
         </section></a>
     <a href="#E1024"><section id='E1024'>
-       <h3>20-02-1946; 1600</h3>
+       <h1>February 20, 1946 HMIS Gondwana 1600</h1>
        <p>HMIS Gondwana. The ratings from outside had come back with the news of the latest developments. This gave rise to various discussions. Once more the battle of arguments and counter-arguments started. Unused to political struggles of any sort, they began to discuss the fundamentals. Violence versus non-violence; armed resistance versus peaceful protest. Fight back the enemy: if you do not get him he will get you. This was the lesson that they had learned during the six years of war. It had stood them in good stead all these days. But now it all seemed different. But was it really so different? Were not the British the ‘enemy'? Were they not gathering their forces? How could they keep quiet? lf they did not hit back now, they themselves would be slaughtered. After all this was war. And so they argued for hours. On the practice of non- violence they differed, but on one point they agreed. There could be no ignoble surrender. If the British attacked they would have to be fought back with arms. To pacify the protagonists of non-violence it was agreed that before taking to arms a warning would be given to the enemy asking him to clear out. Once this was decided, they began to work with clockwork efficiency. A list of arms and ammunition was prepared. The officers had already abandoned the ship and everything was in the hands of the ratings. The weapons were not many, but sufficient to carry on for some time. They had 4 inch guns, medium machine-guns, rifles, revolvers, grenades and depth-charges. All the weapons and ammunition were ready for use as they had been recently prepared for training purposes. An emergency programme was next chalked out. The tasks were allotted, orders were given and battle positions chosen. A watch was appointed for the night with orders to keep a look-out for ship movements during the night.</p>
-       <img src="E1024b.jpg" alt="E1024b">
+       <a href="img/E1024b.jpg" data-lightbox="image-1"><img src="img/E1024b.jpg" alt="E1024b"></a>
         </section></a>
     <a href="#E1025"><section id='E1025'>
-        <h3>20-02-1946; 1700</h3>
+        <h1>February 20, 1946 RIN Detention Quarters, Sewree 1700</h1>
         <p>The news spread like wild fire among the ratings in the Detention Quarters. But they did not know what to do. The CPOs and POs, nearly equal in number to the ratings, were very hostile. They could not go and ask them what to do. So they were in a fix with nobody to guide them. The whole day passed in deliberations and when the ratings returned from the Talwar it was finally decided that they would refuse duty that night. No rating turned up at Night Watch. Promptly the Commanding Officer together with other officers and'the Master- at-Arms came ·over to the ratings and asked them to remain loyal.</p>
         <!--this event has no image-->
         </section></a>
     <a href="#E1026"><section id='E1026'>
-       <h3>21-02-1946; 0730</h3>
+       <h1>February 21, 1946 Fort Barracks 0730</h1>
        <p>The fateful day dawned. The night had passed quietly. The morning too seemed pleasant and peaceful. By 7:30 the ships poured out their load of ratings on the dockyard. After a night of tense expectation and anxiety there was now a sense of relief. The boys sang and shouted and greeted the peaceful morning with revolutionary slogans. At Fort Barracks the ratings gathered in the gymnasium after breakfast to plan their programme for the day. There followed the usual clash of ideas and suggestions and speeches expressing the determination to continue the struggle against all odds. Suddenly a rating broke into the meeting from outside. He rushed to the platform and cried: "They are shooting down our brothers at Castle Barracks. We must go to their help." It took them some time to realise what had happened. There was a sudden silence. Then the fury burst forth. So the enemy had struck. Yes. They must rush to the side of their brothers. Why waste time in useless discussion? There was no time for words. It was time for action.</p>
-      <img src="E1027a.jpg" alt="E1027a">
+      <a href="img/E1027a.jpg" data-lightbox="image-1"><img src="img/E1027a.jpg" alt="E1027a"></a>
         </section></a>
     <a href="#E1027"><section id='E1027'>
-       <h3>21-02-1946; 0730</h3>
+       <h1>February 21, 1946 Fort Barracks 0730</h1>
        <p>The fateful day dawned. The night had passed quietly. The morning too seemed pleasant and peaceful. By 7:30 the ships poured out their load of ratings on the dockyard. After a night of tense expectation and anxiety there was now a sense of relief. The boys sang and shouted and greeted the peaceful morning with revolutionary slogans. At Fort Barracks the ratings gathered in the gymnasium after breakfast to plan their programme for the day. There followed the usual clash of ideas and suggestions and speeches expressing the determination to continue the struggle against all odds. Suddenly a rating broke into the meeting from outside. He rushed to the platform and cried: "They are shooting down our brothers at Castle Barracks. We must go to their help." It took them some time to realise what had happened. There was a sudden silence. Then the fury burst forth. So the enemy had struck. Yes. They must rush to the side of their brothers. Why waste time in useless discussion? There was no time for words. It was time for action.</p>
-      <img src="E1027a.jpg" alt="E1027a">
+      <a href="img/E1027a.jpg" data-lightbox="image-1"><img src="img/E1027a.jpg" alt="E1027a"></a>
         </section></a>
    <a href="#E1029"><section id='E1029'>
-       <h3>21-02-1946; 0900</h3>
+       <h1>February 21, 1946 Dockyard, Ballard Pier 0900</h1>
        <p>At the Dockyard too the early morning gaiety was brought to a sudden end by the sound of firing from the direction of Castle Barracks. It was about 9 a.m. A horrified silence fell over the crowd as the first piercing sound of rifle and machine-gun fire penetrated the hum of voices. Like one man they turned round anxiously towards Castle Baracks.They looked across the water. With the massive Town Hall and a cluster of houses forming the background stood a young signaller on the roof of Castle Barracks. He was sending a message to them. It said that British troops were attacking them from all sides and that they were replying: 'bullets with bullets’. The message was immediately passed on to the DSS who relayed it to all ships and establishments. The other ratings immediately dispersed to their ships. There was a lot to be done. In every ship it was the same. The ratings broke open the magazine, collected whatever arms and ammunition they could, got into their battle equipment and took up positions in the ships. In the dockyards too, battle positions were occupied. Within an hour the whole place was empty and an ominous calm had descended over the area. From their positions, the ratings watched with growing concern and impatience the truck loads of British troops moving towards Castle Barracks.</p>
-       <img src="E1029.jpg" alt="E1029">
+       <a href="img/E1029.jpg" data-lightbox="image-1"><img src="img/E1029.jpg" alt="E1029"></a>
         </section></a>
    <a href="#E1030"><section id='E1030'>
-       <h3>21-02-1946; 1000</h3>
-       <p>The fight had spread from Castle Barracks to the ships in the stream as well. At about 10 a.m., President Khan came to the break-water. The news of his arrival spread like wild fire. All the ratings expected some directive from him, an order to begin an offensive to relieve their brothers at Castle Barracks. All the ratings except those in battle positions gathered round</p>
-       <!--this event has no image-->
-        </section></a>
-   <a href="#E1031"><section id='E1031'>
-       <h3>21-02-1946; 1050</h3>
-       <p>At 10-50 am, military reinforcements had to be called for assistance in Castle Barracks. At the same time, a signal was intercepted from HMIS Narbada stating that if shots were fired by the troops, all ships would open fire. She is also repoted to have invited other ships on loud hailers inciring them by saying, 'All guns loaded. Do the same and if any shots are heard from ashore, open fire'.</p>
+        <h1>February 21, 1946 HMIS Kumaon 1000</h1>
+        <p>The fight had spread from Castle Barracks to the ships in the stream as well. At about 10 a.m., President Khan came to the break-water. The news of his arrival spread like wild fire. All the ratings expected some directive from him, an order to begin an offensive to relieve their brothers at Castle Barracks. All the ratings except those in battle positions gathered round</p>
+        <!--this event has no image-->
+    </section></a>
+    <a href="#E1031"><section id='E1031'>
+        <h1>February 21, 1946 HMIS Narbada 1050</h1>
+        <p>At 10-50 am, military reinforcements had to be called for assistance in Castle Barracks. At the same time, a signal was intercepted from HMIS Narbada stating that if shots were fired by the troops, all ships would open fire. She is also repoted to have invited other ships on loud hailers inciring them by saying, 'All guns loaded. Do the same and if any shots are heard from ashore, open fire'.</p>
        <!--this event has no image-->
         </section></a>
    <a href="#E1032"><section id='E1032'>
-       <h3>21-02-1046; 1200</h3>
-       <p>Godfrey had decided to begin an all-out offensive. All Indian troops were removed. British troops swarmed into the area of Castle Barracks. The Town Hall became their operations headquarters. By midday there were at least 17 trucks and armoured cars packed with troops armed with light machine-guns, rifles and other weapons held at the ready. The second phase of the offensive opened with light machine-gun fire from the direction of the gun gate. But the ratings, veterans of many a grim battle, were not in the least terrified. Promptly they took action. The light machine-gun was silenced and the two British soldiers manning it had to be removed to hospital. Now hell seemed to have been let loose. There was constant firing from both sides. The ratings knew that the were outnumbered, that the enemy had better equipment but they were still prepared to die fighting in the glorious traditions of the Indian Navy.</p>
+        <h1>February 21, 1946 Town Hall, Fort 1200</h1>
+        <p>Godfrey had decided to begin an all-out offensive. All Indian troops were removed. British troops swarmed into the area of Castle Barracks. The Town Hall became their operations headquarters. By midday there were at least 17 trucks and armoured cars packed with troops armed with light machine-guns, rifles and other weapons held at the ready. The second phase of the offensive opened with light machine-gun fire from the direction of the gun gate. But the ratings, veterans of many a grim battle, were not in the least terrified. Promptly they took action. The light machine-gun was silenced and the two British soldiers manning it had to be removed to hospital. Now hell seemed to have been let loose. There was constant firing from both sides. The ratings knew that the were outnumbered, that the enemy had better equipment but they were still prepared to die fighting in the glorious traditions of the Indian Navy.</p>
        <!--this event has no image-->
-        </section></a>
-     <a href="#E1033"><section id='E1033'>
-       <h3>21-02-1946; 1330</h3>
+    </section></a>
+    <a href="#E1033"><section id='E1033'>
+       <h1>February 21, 1946 Castle Barracks 1330</h1>
        <p>The battle at Castle Barracks was now in full swing. At about 1:30 British troops entered the area between the Dockyard and the MTE barracks. Their main offensive was still concentrated on Castle Barracks. But they had intercepted the messages from the Narbada and knew that the ships were ready to come to the aid of the ratings on shore. So now they started a double offensive. Some climbed up the trees and began to fire in the direction of Castle Barracks. Others concentrated their fire on the ships in the break-water. Four men on the Sindh were injured. Now the ships were stirred into activity. The Punjab. was short of ammunition. The ratings acted quickly. They promptly raided the RN ship which was anchored next to them and brought over all its ammunition. They immediately opened up with one shot from the 12-pounder and followed it up with a concentration from the Oerlikon and anti-aircraft guns. Some 120 rounds were fired within a short time. By this time the other ships had also trained their guns on the same area. HMIS Oudh opened up with her 12-pounders. A number of British soldiers were thrown off the trees and the area was soon cleared. Stray sniping and intermittent firing continued for a long time all over the area. It was the same at Castle Barracks at this time. The main offensive having thus been followed by a combined action of both the ratings on the ships and those ashore, the firing died down. Stray firing however continued throughout the day.</p>
-        <img src="E1033.jpg" alt="E1033">
-        </section></a>
+        <a href="img/E1033.jpg" data-lightbox="image-1"><img src="img/E1033.jpg" alt="E1033"></a>
+    </section></a>
     <a href="#E1034"><section id='E1034'>
-        <h3>21-02-1046; 1400</h3>
+        <h1>February 21, 1946 Dockyard, Ballard Pier, HMIS Clive, HMIS Khyber, HMIS Narbada 1400</h1>
         <p>The Clive, Khyber and Lawrence, were near the Gateway of lndia and could resist any offensive from that end. The Narbada, Jumna, Kumaon and others near the dockyards could cover the Ballard Estate area. Orders were accordingly issued from the Narbada to these ships to be ready to fire if they saw any suspicious movements. The signals were sent to the Jumna, which relayed them to all ships and to the DSS. The DSS too repeated the signals. The Narbada was asked to supply extra ammunition wherever it was needed. After these battle plans had been drawn up, the NCSC considered the question of food and water. Food was not so much of a problem. It was always available from the people. The problem was collecting it. Already the people of Bombay had rushed to the aid of the ratings. The sea-face round the Gateway of India looked like a fair. Men, women and children, of all classes, of all religions, crowded round.</p>
-      <img src="E1034b.jpg" alt="E1034b">
-        </section></a>
-        <a href="#E1035"><section id='E1035'>
-       <h3>21-02-1946; 1430</h3>
-       <p>Admiral Godfey’s Radio Broadcast: "In the present regrettable state of indiscipline in the Service, I have adopted this means of addressing the R.I.N. as being the way in which I can speak to the greatest number of you at one time. To start with every one of you must realise that the Government of India has no intention of allowing indiscipline to continue, or their actions to be influenced by such indiscipline. They will take the most stringent measures to restore discipline using the vast forces at their disposal if necessary. I ask you to bear this in mind in considering the other things which I have to say to you now. As regards the requests made by those of you who waited on the Flag Officer, Bombay, on Tuesday, the 19th February, you may be assured that all reasonable complaints, or grievances (if any), will be fully investigated. Demobilisation will proceed strictly in accordance with age and service groups, though you must realise that this will mean that the Service will lose its trained nucleus of experienced ratings, especially in the Communication Branch. The whole question of pay, travelling allowances and family allowances is now being examined by an inter-Services Committee. This Committee has just been afloat in one of H.M.I. ships and has visited establishments in Karachi, Jamnagar and Bombay. The situation in Bombay this morning both afloat and ashore is deplorable. A state of open rioting prevails in which ratings appear to have completely lost control of their senses. In order to ensure that ratings confined to barracks did actually stay there and to avoid a recurrence of the unfortunate incidents of the day before it was necessary to place small guards of soldiers on the gates of the Talwar and Castle Barracks last night. This morning ratings from Castle Barracks burst through the guard which was forced to open fire. This fire was replied to by ratings inside the barracks. The only reason for firing in the first place was to contain ratings within the barracks and not to coerce or intimidate them. I want again to make it quite plain that the Government of India will never give in to violence. To continue the struggle is the height of folly when you take into account the overwhelming forces at the disposal of the Government at this time, and which will be used to their uttermost even if it means the destruction of the Navy of which we have been so proud."</p>
-       <img src="E1035a.jpg" alt="E1035a">
-        </section></a>
+        <a href="img/E1034b.jpg" data-lightbox="image-1"><img src="img/E1034b.jpg" alt="E1034b"></a>
+    </section></a>
+    <a href="#E1035"><section id='E1035'>
+        <h1>February 21, 1946 Bombay All India Radio 1430</h1>
+        <p>Admiral Godfey’s Radio Broadcast: "In the present regrettable state of indiscipline in the Service, I have adopted this means of addressing the R.I.N. as being the way in which I can speak to the greatest number of you at one time. To start with every one of you must realise that the Government of India has no intention of allowing indiscipline to continue, or their actions to be influenced by such indiscipline. They will take the most stringent measures to restore discipline using the vast forces at their disposal if necessary. I ask you to bear this in mind in considering the other things which I have to say to you now. As regards the requests made by those of you who waited on the Flag Officer, Bombay, on Tuesday, the 19th February, you may be assured that all reasonable complaints, or grievances (if any), will be fully investigated. Demobilisation will proceed strictly in accordance with age and service groups, though you must realise that this will mean that the Service will lose its trained nucleus of experienced ratings, especially in the Communication Branch. The whole question of pay, travelling allowances and family allowances is now being examined by an inter-Services Committee. This Committee has just been afloat in one of H.M.I. ships and has visited establishments in Karachi, Jamnagar and Bombay. The situation in Bombay this morning both afloat and ashore is deplorable. A state of open rioting prevails in which ratings appear to have completely lost control of their senses. In order to ensure that ratings confined to barracks did actually stay there and to avoid a recurrence of the unfortunate incidents of the day before it was necessary to place small guards of soldiers on the gates of the Talwar and Castle Barracks last night. This morning ratings from Castle Barracks burst through the guard which was forced to open fire. This fire was replied to by ratings inside the barracks. The only reason for firing in the first place was to contain ratings within the barracks and not to coerce or intimidate them. I want again to make it quite plain that the Government of India will never give in to violence. To continue the struggle is the height of folly when you take into account the overwhelming forces at the disposal of the Government at this time, and which will be used to their uttermost even if it means the destruction of the Navy of which we have been so proud."</p>
+        <a href="img/E1035a.jpg" data-lightbox="image-1"><img src="img/E1035a.jpg" alt="E1035a"></a>
+    </section></a>
     <a href="#E1036"><section id='E1036'>
-       <h3>21-02-1946; 1700</h3>
-       <p>"The Central Strike Committee of the strikers in the Indian Navy makes this earnest appeal to the leaders of the political parties in India and the Indian people. "We have all of us been in the Indian Navy for several years. During this time we have been undergoing untold hardships, low pay, bad food and the most outrageous racial discrimination. Also, today, with the end of the war, the problem of demobilisation and resettlement has come for all the thousands of us. We have innumerable times made representations to the authorities for the redressal of our grievances, particularly about racial discrimination and for equality of treatment, a demand which every self-respecting patriot will completely support. But the authorities never listened. Therefore, following the example of the brothers in the RIAF we decided to go on strike. For the last five days we have been on a peaceful, disciplined, organised strike. "The authorities, however, have refused to listen to us. Instead, they have called up the Military, particularly British troops, since naturally they could not trust our Indian Army brothers. They opened fire on us in Castle Barracks and forced us to take to arms to defend ourselves. Now the Flag Officer is threatening us with total destruction, using the overwhelming armed forces of the Empire.  No Indian could expect us to surrender on such humiliating terms, to bend so low before the threatening jack-boot of our imperialist rulers. And we shall not surrender to threats, though we are always prepared to-negotiate about our demands. But we know too that the Flag Officer will carry out this threat unless, you, our people, and our respected political leaders, come to our aid. You do not want your Indian brothers to be destroyed by British bullets. You know our demands are just, you must support us. We appeal to you all, particularly to the leaders of the Congress, League and Communist Parties: Use all your might to prevent a bloodbath in Bombay!”</p>
-       <img src="E1036.jpg" alt="E1036">
-        </section></a>
+        <h1>February 21, 1946 HMIS Narbada 1700</h1>
+        <p>"The Central Strike Committee of the strikers in the Indian Navy makes this earnest appeal to the leaders of the political parties in India and the Indian people. "We have all of us been in the Indian Navy for several years. During this time we have been undergoing untold hardships, low pay, bad food and the most outrageous racial discrimination. Also, today, with the end of the war, the problem of demobilisation and resettlement has come for all the thousands of us. We have innumerable times made representations to the authorities for the redressal of our grievances, particularly about racial discrimination and for equality of treatment, a demand which every self-respecting patriot will completely support. But the authorities never listened. Therefore, following the example of the brothers in the RIAF we decided to go on strike. For the last five days we have been on a peaceful, disciplined, organised strike. "The authorities, however, have refused to listen to us. Instead, they have called up the Military, particularly British troops, since naturally they could not trust our Indian Army brothers. They opened fire on us in Castle Barracks and forced us to take to arms to defend ourselves. Now the Flag Officer is threatening us with total destruction, using the overwhelming armed forces of the Empire.  No Indian could expect us to surrender on such humiliating terms, to bend so low before the threatening jack-boot of our imperialist rulers. And we shall not surrender to threats, though we are always prepared to-negotiate about our demands. But we know too that the Flag Officer will carry out this threat unless, you, our people, and our respected political leaders, come to our aid. You do not want your Indian brothers to be destroyed by British bullets. You know our demands are just, you must support us. We appeal to you all, particularly to the leaders of the Congress, League and Communist Parties: Use all your might to prevent a bloodbath in Bombay!”</p>
+        <a href="img/E1036.jpg" data-lightbox="image-1"><img src="img/E1036.jpg" alt="E1036"></a>
+    </section></a>
     <a href="#E1037"><section id='E1037'>
-       <h3>21-02-1946; 2000</h3>
-       <p>On the evening of 21-02-1946 the local Communists went round the Mill area asking the millhands ti observe 'hartal' on 22-02-1946 as a rotest against the cut in the ration quota and also against fiting on the RIN ratings. As a result, 14 textile mills closed their night shifts.</p>
-       <img src="E1037.jpg" alt="E1037">
-        </section></a>
+        <h1>February 21, 1946 Shivaji Park, Matunga, Lower Parel 2000</h1>
+        <p>On the evening of 21-02-1946 the local Communists went round the Mill area asking the millhands ti observe 'hartal' on 22-02-1946 as a rotest against the cut in the ration quota and also against fiting on the RIN ratings. As a result, 14 textile mills closed their night shifts.</p>
+        <a href="img/E1037.jpg" data-lightbox="image-1"><img src="img/E1037.jpg" alt="E1037"></a>
+    </section></a>
     <a href="#E1039"><section id='E1039'>
-       <h3>22-02-1946; 0900</h3>
-       <p>Commissioner of Police declares general curfew for 15 datys across south and central Bombay</p>
-        <img src="E1039.jpg" alt="E1039">
-        </section></a>
+        <h1>February 22, 1946 Police Stations across South Bombay 0900</h1>
+        <p>Commissioner of Police declares general curfew for 15 days across south and central Bombay</p>
+        <a href="img/E1039.jpg" data-lightbox="image-1"><img src="img/E1039.jpg" alt="E1039"></a>
+    </section></a>
     <a href="#E1040"><section id='E1040'>
-       <h3>22-02-1946; 1430</h3>
-       <p> At about 2:30 a formation of RAF aircraft flew low over Bombay city and the harbour area.</p>
-       <!--this event has no image-->
+        <h1>February 22, 1946 - 1430</h1>
+        <p> At about 2:30 a formation of RAF aircraft flew low over Bombay city and the harbour area.</p>
+        <!--this event has no image-->
         </section></a>
-     <a href="#E1041"><section id='E1041'>
-       <h3>22-02-1946; 2100</h3>
-       <p>It was 9 PM when the meeting broke up. The sepoys got ready to march back. But how could that be allowed? The ratings immediately invited them to use their trucks. After all, it was all theirs now. Those who knew how to drive volunteered to take them back to their camp. Amid shouts of "Jai Hind" and "Inquilab Zindabad" the sepoys left. This visit of the sepoys from Kurla cheered up the ratings a lot. They felt again that they were not alone. It seemed obvious to them now that more and more units of the three Services would join up and this would lead to a great revolt. They also expected the British offensive to increase as well. The leading ratings of the camp got together to discuss the situation and plan a defence of the establishment if the British should attack. It was decided that they would break open the armoury and post a guard over it. Thus they would be able to take up arms to defend themselves at short notice in case of an emergency. They thought that it would be best to break open the armoury after midnight. A little after midnight a few ratings gathered together around. the armoury. As softly as they could, they broke open the lock. They threw open the doors of the armoury and, to their surprise, it was empty. They were bewildered. Now what would happen? Nothing could be done that night. In the morning it was discovered that the authorities had removed the arms an ammunition on the very first day of the strike Now a search was started throughout the camp but it was all in vain. The whole day passed in discussions .on how to procure arms and how to defend themselves in case they were attacked. Surrender they would not. That was definite. Nothing of importance happened that day. The night too passed peacefully. Of course they had no news as to what was happening in Bombay.</p>
-       <img src="E1041a.jpg" alt="E1041a">
+    <a href="#E1041"><section id='E1041'>
+        <h1>February 22, 1946 HMIS Talwar South Bombay 2100</h1>
+        <p>It was 9 PM when the meeting broke up. The sepoys got ready to march back. But how could that be allowed? The ratings immediately invited them to use their trucks. After all, it was all theirs now. Those who knew how to drive volunteered to take them back to their camp. Amid shouts of "Jai Hind" and "Inquilab Zindabad" the sepoys left. This visit of the sepoys from Kurla cheered up the ratings a lot. They felt again that they were not alone. It seemed obvious to them now that more and more units of the three Services would join up and this would lead to a great revolt. They also expected the British offensive to increase as well. The leading ratings of the camp got together to discuss the situation and plan a defence of the establishment if the British should attack. It was decided that they would break open the armoury and post a guard over it. Thus they would be able to take up arms to defend themselves at short notice in case of an emergency. They thought that it would be best to break open the armoury after midnight. A little after midnight a few ratings gathered together around. the armoury. As softly as they could, they broke open the lock. They threw open the doors of the armoury and, to their surprise, it was empty. They were bewildered. Now what would happen? Nothing could be done that night. In the morning it was discovered that the authorities had removed the arms an ammunition on the very first day of the strike Now a search was started throughout the camp but it was all in vain. The whole day passed in discussions .on how to procure arms and how to defend themselves in case they were attacked. Surrender they would not. That was definite. Nothing of importance happened that day. The night too passed peacefully. Of course they had no news as to what was happening in Bombay.</p>
+        <a href="img/E1041a.jpg" data-lightbox="image-1"><img src="img/E1041a.jpg" alt="E1041a"></a>
         </section></a>
     <a href="#E1042"><section id='E1042'>
-       <h3>22-02-1946; 2330</h3>
-       <p>The final historic session of the Naval Central Strike Committee began at last. It lasted till morning. About-thirty-six people were present. Khan gave a detailed report of his talks with Sardar Patel and the FOB. He said that the decision of the NCSC must reach the FOB by 6:30 in the morning. Otherwise the armed truce would be over and the entire force at his disposal would be used against the ratings. Once again he advised surrender. For a few minutes there was an uproar. Except for a small minority, everyone was opposed to the idea of surrender. That was the directive they had received from the ratings they represented. There could be no unconditional surrender. That would only be inviting defeat at the moment of victory. As one of the ratings put it: "We cannot surrender now. We are about to win our demands”.</p>
+        <h1>February 22, 1946 HMIS Talwar 2330</h1>
+        <p>The final historic session of the Naval Central Strike Committee began at last. It lasted till morning. About-thirty-six people were present. Khan gave a detailed report of his talks with Sardar Patel and the FOB. He said that the decision of the NCSC must reach the FOB by 6:30 in the morning. Otherwise the armed truce would be over and the entire force at his disposal would be used against the ratings. Once again he advised surrender. For a few minutes there was an uproar. Except for a small minority, everyone was opposed to the idea of surrender. That was the directive they had received from the ratings they represented. There could be no unconditional surrender. That would only be inviting defeat at the moment of victory. As one of the ratings put it: "We cannot surrender now. We are about to win our demands”.</p>
        <!--CHECK WITH ASHISH-->
-        </section></a>
-     <a href="#E1042a"><section id='E1042a'>
-       <h3>22-02-1946; 2400</h3>
-       <p>By unconditional surrender is meant (a) No conditions whatever can be stipulated by the mutineers.</p>
-       <img src="E1042a.jpg" alt="E1042a">
-        </section></a>
-     <a href="#E1043"><section id='E1043'>
-       <h3>23-02-1946; 1200</h3>
-       <p>Shortly after midday the CO came back. He showed the ratings a signal which declared that the ratings in Bombay had surrendered and the strike was over. He called upon them to surrender too. The ratings could not believe him. How could it be? Were not they going to fight to the finish? Was not this struggle going to lead to the final battle for liberation? No, the officer was only trying to trick them into submission. They were not fools. They were not going to surrender. Some of them replied to the CO: "We do not believe you. You are trying to bluff us with bogus signals.". The CO tried to argue with them."All right”, they said, "if it is true, bring a member of the Central Strike Committee here. If he tells us that the strike is over, then we shall see”</p>
-       <img src="E1043.jpg" alt="E1043">
-        </section></a>
-     <a href="#E1044"><section id='E1044'>
-       <h3>23-02-1946; 0600</h3>
-       <p>A vote was taken. Only six members opposed the decision to surrender. The rest were all in favour of Khan's motion. These six representatives came from the Punjab, Assam, Khyber, Jumna, MMS 129 and from Castle Barracks. It will be remembered that Castle Barracks had been represented by two men. One of them voted with the majority. The decision to surrender was taken. It was nearly six: Khan left to convey the decision to the FOB. The resolution passed at the meeting was immediately sent to the Press.</p>
-       <!--this event has no image-->
-        </section></a>
-     <a href="#E1045"><section id='E1045'>
-       <h3>23-02-1946; 1200</h3>
-       <p>300,000 MILL WORKERS ON STRIKE Nearly 300,000 workers were again idle to-day having refused to go to work following yesterday's firings in the labour area. All the textile mills and other factories were, therefore, idle. One or two textile mills which made an attempt to resume work this morning were prevented from doing so. The situation in the mill area upto 11 a. m was quiet. Shivaji Park at Dadar was the scene of recrudescene of trouble after 11 'o clock. this morning. A number of military lorries were reported to have been set on fire. A contingent of British troops has been rushed to this area. </p>
-      <!-- <a href="#E1045"><section id='E1045'>-->
-           <!--CHECK WITH ASHISH 45 NOT WORKING-->
-        </section></a>
-     <a href="#E1047"><section id='E1047'>
-       <h3>26-02-1946; Time</h3>
-       <p>Jawaharlal Nehru: A whole new chapter, but misguided, and no sympathy for vandalism.</p>
-       <img src="E1047.jpg" alt="E1047">
-        </section></a>
-     <a href="#E1048"><section id='E1048'>
-       <h3>25-02-1946; 1000</h3>
-       <p>Letter from Rear Admiral Rattray: efforts to round up and restrain any members of the ships' company who are definitely known to have taken a prominent part in the mutiny.</p>
-      <img src="E1048.jpg" alt="E1048">
-        </section></a>
-      <a href="#E1050"><section id='E1050'>
-       <h3>05-02-1947; THERE AINT NO Time ASHISH</h3>
-       <p>Conditions in the RIN today  a year later.</p>
-        <img src="E1050.jpg" alt="E1050">
-        </section></a>
-      <a href="#E1053"><section id='E1053'>
-       <h3>20-11-1946; 1200</h3>
-       <p>Activities of Ratings Discharged from the Royal Indian Navy as a result of the February Mutiny.</p>
-       <!--this event has no image-->
-        </section></a>
-      <a href="#E1054"><section id='E1054'>
-       <h3>01-12-1946; 1200</h3>
-       <p>Four ex-ratings, Hiralal Khosla, Gaus Mohammed Khan, Shravan Lal, Bansi Lal</p>
-       <!--this event has no image-->
-        </section></a>
-      <a href="#E1055"><section id='E1055'>
-       <h3>15-03-1946; 1200</h3>
-       <p>Hunger strike at Mulund: About 12 noon on the 13th March a man by the name Manohar Lal, believed to be a reporter of the Free Press Journal, arrived in Mululd Camp dressed in RIN uniform</p>
-       <img src="E1055.jpg" alt="E1055">
-        </section></a>
+    </section></a>
+    <a href="#E1042a"><section id='E1042a'>
+        <h1>February 22, 1946 Castle Barracks 2400</h1>
+        <p>By unconditional surrender is meant (a) No conditions whatever can be stipulated by the mutineers.</p>
+        <a href="img/E1042a.jpg" data-lightbox="image-1"><img src="img/E1042a.jpg" alt="E1042a"></a>
+    </section></a>
+    <a href="#E1043"><section id='E1043'>
+        <h1>February 23, 1946 HMIS Akbar</h1>
+        <p>Shortly after midday the CO came back. He showed the ratings a signal which declared that the ratings in Bombay had surrendered and the strike was over. He called upon them to surrender too. The ratings could not believe him. How could it be? Were not they going to fight to the finish? Was not this struggle going to lead to the final battle for liberation? No, the officer was only trying to trick them into submission. They were not fools. They were not going to surrender. Some of them replied to the CO: "We do not believe you. You are trying to bluff us with bogus signals.". The CO tried to argue with them."All right”, they said, "if it is true, bring a member of the Central Strike Committee here. If he tells us that the strike is over, then we shall see”</p>
+        <a href="img/E1043.jpg" data-lightbox="image-1"><img src="img/E1043.jpg" alt="E1043"></a>
+    </section></a>
+    <a href="#E1044"><section id='E1044'>
+        <h1>February 23, 1946 HMIS Talwar 0600</h1>
+        <p>A vote was taken. Only six members opposed the decision to surrender. The rest were all in favour of Khan's motion. These six representatives came from the Punjab, Assam, Khyber, Jumna, MMS 129 and from Castle Barracks. It will be remembered that Castle Barracks had been represented by two men. One of them voted with the majority. The decision to surrender was taken. It was nearly six: Khan left to convey the decision to the FOB. The resolution passed at the meeting was immediately sent to the Press.</p>
+        <!--this event has no image-->
+    </section></a>
+    <a href="#E1045"><section id='E1045'>
+        <h1>February 23, 1946 Parel, Lalbaug, Byculla, Matunga 1200</h1>
+        <p>300,000 MILL WORKERS ON STRIKE Nearly 300,000 workers were again idle to-day having refused to go to work following yesterday's firings in the labour area. All the textile mills and other factories were, therefore, idle. One or two textile mills which made an attempt to resume work this morning were prevented from doing so. The situation in the mill area upto 11 a. m was quiet. Shivaji Park at Dadar was the scene of recrudescene of trouble after 11 'o clock. this morning. A number of military lorries were reported to have been set on fire. A contingent of British troops has been rushed to this area.</p>
+        <!--this event has no image-->
+    </section></a>
+    <a href="#E1048"><section id='E1048'>
+        <h1>February 25, 1946 Castle Barracks 1000</h1>
+        <p>Letter from Rear Admiral Rattray: efforts to round up and restrain any members of the ships' company who are definitely known to have taken a prominent part in the mutiny.</p>
+    <a href="img/E1048.jpg" data-lightbox="image-1"><img src="img/E1048.jpg" alt="E1048"></a>
+    </section></a>
+    <a href="#E1047"><section id='E1047'>
+        <h1>February 26, 1946 Chowpatty, evening</h1>
+        <p>Jawaharlal Nehru: A whole new chapter, but misguided, and no sympathy for vandalism.</p>
+        <a href="img/E1047.jpg" data-lightbox="image-1"><img src="img/E1047.jpg" alt="E1047"></a>
+    </section></a>
+    <a href="#E1050"><section id='E1050'>
+        <h1>February 05, 1947, Castle Barracks, a year later</h1>
+        <p>Conditions in the RIN today</p>
+        <a href="img/E1050.jpg" data-lightbox="image-1"><img src="img/E1050.jpg" alt="E1050"></a>
+    </section></a>
+    <a href="#E1054"><section id='E1054'>
+        <h1>December 01, 1946 Shivaji Park, Gokhale Road (North)</h1>
+        <p>Four ex-ratings, Hiralal Khosla, Gaus Mohammed Khan, Shravan Lal, Bansi Lal</p>
+        <!--this event has no image-->
+    </section></a>
+    <a href="#E1055"><section id='E1055'>
+        <h1>March 15, 1946 Mulund Camp</h1>
+        <p>Hunger strike at Mulund: About 12 noon on the 13th March a man by the name Manohar Lal, believed to be a reporter of the Free Press Journal, arrived in Mululd Camp dressed in RIN uniform</p>
+        <a href="img/E1055.jpg" data-lightbox="image-1"><img src="img/E1055.jpg" alt="E1055"></a>
+    </section></a>
     <a href="#E1056"><section id='E1056'>
-       <h3>19-08-1946; 1200</h3>
-       <p>Thakurdwar</p>
-       <img src="E1056.jpg" alt="E1056">
-        </section></a>
+        <h1>August 19, 1946 Thakurdwar</h1>
+        <p>Thakurdwar</p>
+        <a href="img/E1056.jpg" data-lightbox="image-1"><img src="img/E1056.jpg" alt="E1056"></a>
+    </section></a>
     <a href="#E1057"><section id='E1057'>
-       <h3>07-06-1946; 1200</h3>
-       <p>Hill Road, Bandra</p>
-       <img src="E1057.jpg" alt="E1057">
+        <h1>June 07, 1946 Hill Road</h1>
+        <p>Hill Road, Bandra</p>
+        <a href="img/E1057.jpg" data-lightbox="image-1"><img src="img/E1057.jpg" alt="E1057"></a>
         </section></a>
     <a href="#E1058"><section id='E1058'>
-       <h3>18-06-1946; 1200</h3>
+       <h1>June 18, 1946 Castle Barracks</h1>
        <p>Lieut S.A. Chandramani, RINVR - it has come to notice that the abovementioned officer is taking an active interest in political affairs and is closely connected with the Congress Socialist Party.</p>
-       <img src="E1058.jpg" alt="E1058">
-        </section></a>
+        <a href="img/E1058.jpg" data-lightbox="image-1"><img src="img/E1058.jpg" alt="E1058"></a>
+    </section></a>
     <a href="#E1060"><section id='E1060'>
-       <h3>08-04-1946; 1200</h3>
+       <h1>08-04-1946 Castle Barracks 1200</h1>
        <p>Krishna Nair, ordinary telegraphist, known Communist worker.</p>
-       <img src="E1060.jpg" alt="E1060">
-        </section></a>
+        <a href="img/E1060.jpg" data-lightbox="image-1"><img src="img/E1060.jpg" alt="E1060"></a>
+    </section></a>
     <a href="#E1062"><section id='E1062'>
-       <h3>25-03-1946; 1200</h3>
+       <h1>25-03-1946 Mulund Camp 1200</h1>
        <p>Rajeshwar Singh writing to Leader Manhar, Communist Party</p>
-       <!--this event has no image-->
-        </section></a>
+        <!--this event has no image-->
+    </section></a>
     <a href="#E1063"><section id='E1063'>
-       <h3>23-05-1946; 1200</h3>
+       <h1>23-05-1946 Kalyan 1200</h1>
        <p>Leading Signalman M.S. Khan being deported from Bombay</p>
-       <img src="E1063.jpg" alt="E1063">
-        </section></a>
+        <a href="img/E1063.jpg" data-lightbox="image-1"><img src="img/E1063.jpg" alt="E1063"></a>
+    </section></a>
     <a href="#E1064"><section id='E1064'>
-       <h3>20-02-1946; 0900</h3>
-       <p>Mutiny spreads to the Cheetah: About the Kakauri and the Cheetah, it may be mentioned that they wwere demobilization centres and men who reached these establilshments were due to leave the Service within ten days. The mutiny was more or less a p;arting kick to the Service.</p>
-        <img src="E1063.jpg" alt="E1063">
+       <h1>20-02-1946 HMIS Cheetah 0900</h1>
+       <p>Mutiny spreads to the Cheetah: About the Kakauri and the Cheetah, it may be mentioned that they wwere demobilization centres and men who reached these establilshments were due to leave the Service within ten days. The mutiny was more or less a parting kick to the Service.</p>
+        <a href="img/E1064.jpg" data-lightbox="image-1"><img src="img/E1063.jpg" alt="E1063"></a>
         <!--CHECK WITH ASHISH-->
-        </section></a>
-    <a href="#E1065"><section id='E1065'>
-       <h3>09-02-1946; 1230</h3>
-       <p>The strike of the menm of the RIAF Camp at Marine Drive was called off following a meeting with the Air Commodore Cracroft. The strike was over food, better service conditions, elected representation for Indian airmen to the Central Assembly, Gratuity and deferred pay on release, war bonus, clothing allowance and establishment of welfare boards.</p>
-        <img src="E1063.jpg" alt="E1063">
+    </section></a>
+    <a href="#E1065"><section id='E1065'></a>
+       <h1>09-02-1946 RIAF Camp, Dhobi Talao 1230</h1>
+       <p>The strike of the men of the RIAF Camp at Marine Drive was called off following a meeting with the Air Commodore Cracroft. The strike was over food, better service conditions, elected representation for Indian airmen to the Central Assembly, Gratuity and deferred pay on release, war bonus, clothing allowance and establishment of welfare boards.</p>
+        <a href="img/E1063.jpg" data-lightbox="image-1"><img src="img/E1063.jpg" alt="E1063"></a>
         <!--CHECK WITH ASHISH-->
-        </section></a>
-
+    </section></a>
+    <div id="about">
+        <h1>About the Map</h1>
+        <p>This map is created for the <a href="http://insurrection1946.in/">Insurrection 1946 exhibition</a> by <a href="https://github.com/samangoudarzi">Saman Goudarzi</a> and <a href="https://github.com/ajantriks">Sumandro Chattapadhyay</a> at the <a href="http://cis-india.org/">Centre for Internet and Society (CIS)</a>, India, with help from <a href="https://github.com/batpad">Sanjay Bhangar</a> and <a href="http://shekhar.cc/">Shekhar Krishnan</a>. Events, locations, and images are selected and compiled by <a href="https://cscsarchive.academia.edu/AshishRajadhyaksha">Ashish Rajadhyaksha</a> and <a href="https://github.com/samangoudarzi">Saman Goudarzi</a>. Data/image credits. Developed using <a href="https://www.mapbox.com/">Mapbox</a>, <a href="http://mapwarper.net/">MapWarper</a>, and <a href="http://lokeshdhakar.com/projects/lightbox2/">Lightbox</a>.</p>
+    </div>
 </div>
+<!-- location data for the map -->
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FtYW4iLCJhIjoiY2lzajQ2N2YzMDF4cjJ1cHVsdzd1b2ZlOCJ9.K6uUaMmeJ16TFmaORHcp0g';
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/gaman/cjcspd02i0cnh2sntpdsvuusm',
     center: [72.834,18.949],
-    zoom: 12,
+    zoom: 12
 });
 map.on('load', function() {
-    map.addLayer({
-        'id': 'wms-layer',
-        'type': 'raster',
-        'source': {
-            'type': 'raster',
-            'tiles': [
-                'http://mapwarper.net/maps/tile/26881/330/100/100.png '
-            ],
-        },
-        'paint': {}
-    }, 'aeroway-taxiway');
-   var feature = features[0];
-    // Populate the popup and set its coordinates
-    // based on the feature found.
-    popup.setLngLat(feature.geometry.coordinates)
-        .setHTML(feature.properties.NAME)
-        .addTo(map);
+  map.addLayer({
+    'id': 'warper-layer',
+    'type': 'raster',
+    'source': {
+      'type': 'raster',
+      'tiles': [
+        'http://mapwarper.net/maps/tile/405/{z}/{x}/{y}.png'
+      ],
+      // 'tiles': [
+      //   'https://api.mapbox.com/v4/sanjayb.6g7047bl/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoic2FuamF5YiIsImEiOiJjamQ2M2hucTAwaDI2Mndxb2p3dXNxbmRhIn0.-vCHgT_HGq_iCa-qURd_ug'
+      // ],
+      'tileSize': 256
+    }
+  }, 'mutinymap-places-c2wktn');
 });
-    
 var chapters = {
     'E1002': {
         center: [72.825808,18.916782],
@@ -398,7 +393,7 @@ var chapters = {
     },
     'E1010': {
         bearing: 0,
-        center: [72.991,19.246],
+        center: [72.834363,18.937825], //location changed
         zoom: 11,
         speed: 0.5,
         pitch: 0
@@ -412,7 +407,7 @@ var chapters = {
     },
      'E1012': {
         bearing: 0,
-        center: [72.828773,18.918124],
+        center: [72.825808, 18.916782], //loaction changed
         zoom: 16.3,
         speed: 0.5,
         pitch: 0
@@ -433,15 +428,15 @@ var chapters = {
     },
      'E1015': {
         bearing: 0,
-        center: [72.826,18.917],
-        zoom: 12,
+        center: [72.825808, 18.916782], //loaction changed
+        zoom: 16.3,
         speed: 0.5,
         pitch: 0
     },
     'E1016': {
         bearing: 0,
-        center: [72.838199,18.930336],
-        zoom: 12,
+        center: [72.842,18.933], //loaction changed
+        zoom: 15.5,
         speed: 0.5,
         pitch: 0
     },
@@ -481,8 +476,8 @@ var chapters = {
     },
        'E1022': {
         bearing: 0,
-        center: [72.823586, 18.914645],
-        zoom: 15,
+        center: [72.834,18.930], //location changed
+        zoom: 13.6,
         speed: 0.5,
         pitch: 0
     },
@@ -560,9 +555,9 @@ var chapters = {
     },
         'E1034': {
         bearing: 0,
-        center: [72.841214,18.933490],
+        center: [72.838,18.926], //location changed
         speed: 0.5,
-        zoom: 15,
+        zoom: 14.6,
         pitch: 0
     },
          'E1035': {
@@ -580,19 +575,17 @@ var chapters = {
         pitch: 0
     },
          'E1037': {
-             //ASHISH WE GOTTA FIGURE THIS ONE OUT
         bearing: 0,
-        center: [72.841214,18.933490],
+        center: [72.838,19.006], //location changed
         speed: 0.5,
-        zoom: 15,
+        zoom: 13.7,
         pitch: 0
     },
        'E1039': {
-             //ASHISH WE GOTTA FIGURE THIS ONE OUT
         bearing: 0,
-        center: [72.841214,18.933490],
+        center: [72.843,18.989], //location changed
         speed: 0.5,
-        zoom: 15,
+        zoom: 12,
         pitch: 0
     },
           'E1040': {
@@ -603,9 +596,8 @@ var chapters = {
         pitch: 0
     },
          'E1041': {
-             //ASHISH WE GOTTA FIGURE THIS ONE OUT
         bearing: 0,
-        center: [72.841214,18.933490],
+        center: [72.825808, 18.916782], //location changed
         speed: 0.5,
         zoom: 15,
         pitch: 0
@@ -645,6 +637,13 @@ var chapters = {
         zoom: 15,
         pitch: 0
     },
+    'E1048': {
+        bearing: 0,
+        center: [72.840487,18.931905],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
      'E1047': {
         bearing: 0,
         center: [72.812649,18.954512],
@@ -652,23 +651,9 @@ var chapters = {
         zoom: 15,
         pitch: 0
     },
-     'E1048': {
-        bearing: 0,
-        center: [72.840487,18.931905],
-        speed: 0.5,
-        zoom: 15,
-        pitch: 0
-    },
      'E1050': {
         bearing: 0,
         center: [72.840487,18.9319050],
-        zoom: 15,
-        pitch: 0
-    },
-     'E1053': {
-        bearing: 0,
-        center: [72.840487,18.931905],
-        speed: 0.5,
         zoom: 15,
         pitch: 0
     },
@@ -782,6 +767,7 @@ $('a[href*=#]').click(function(event){
     event.preventDefault();
 });
 </script>
-
+<!-- Lightbox -->
+<script src="js/lightbox.js"></script>
 </body>
 </html>
