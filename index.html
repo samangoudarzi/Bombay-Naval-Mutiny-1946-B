@@ -336,8 +336,9 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FtYW4iLCJhIjoiY2lzajQ2N2YzMDF4cjJ1cHVsdzd1b
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/gaman/cjcspd02i0cnh2sntpdsvuusm',
-    center: [72.834,18.949],
-    zoom: 1.9,
+    center: [80.011,24.062], //starting centre
+    zoom: 3.5, //starting zoom
+    maxZoom: 4.5 //cap on how far they can zoom in
 });
 map.on('load', function() {
     map.addLayer({
@@ -346,11 +347,13 @@ map.on('load', function() {
         'source': {
             'type': 'raster',
             'tiles': [
-                'http://mapwarper.net/maps/tile/26881/330/100/100.png '
+                'https://api.mapbox.com/v4/sanjayb.6g7047bl/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoic2FuamF5YiIsImEiOiJjamQ2M2hucTAwaDI2Mndxb2p3dXNxbmRhIn0.-vCHgT_HGq_iCa-qURd_ug'
+                // 'http://mapwarper.net/maps/tile/26881/330/100/100.png '
             ],
         },
         'paint': {}
     }, 'aeroway-taxiway');
+});
    var feature = features[0];
     // Populate the popup and set its coordinates
     // based on the feature found.
