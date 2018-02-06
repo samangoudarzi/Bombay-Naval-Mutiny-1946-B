@@ -8,6 +8,9 @@
     <script src="jquery.min.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet' />
+        <link href="advanced-progress-tracker.css" rel="stylesheet"> <!--added for scale-->
+<script src="//code.jquery.com/jquery-3.1.0.min.js"> </script> <!--added for scale-->
+<script src="advanced-progress-tracker.js"></script><!--added for scale-->
     <style>
         /*body { margin:0; padding:0; }*/
         #map { position:fixed; top:0; bottom:0; width:50%;}
@@ -38,6 +41,7 @@ section:last-child {
         <a href="">South Asia</a>
         <a href="">Empire</a></div>
     </div> 
+<div id="TrackScrollProgress">
 <a href="#Start"><section id='Start' class='active'>
         <h3>This is my description Please Scroll Down to Start the Story</h3>
     </section></a>
@@ -324,7 +328,7 @@ section:last-child {
         <img src="E1063.jpg" alt="E1063">
         <!--CHECK WITH ASHISH-->
         </section></a>
-
+    </div>
 </div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FtYW4iLCJhIjoiY2lzajQ2N2YzMDF4cjJ1cHVsdzd1b2ZlOCJ9.K6uUaMmeJ16TFmaORHcp0g';
@@ -797,6 +801,8 @@ $('a[href*=#]').click(function(event){
     }, 500);
     event.preventDefault();
 });
+$('body').progressTracker();
+
 </script>
 
 </body>
