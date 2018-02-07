@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Advanced Scroll Progress Tracker Plugin Example</title>
+        <meta charset='utf-8' />
+        <title>test</title>
+       <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link href='mutinymap.css' rel='stylesheet' />
+    <script src="jquery.min.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet' />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link href="advanced-progress-tracker.min.css" rel="stylesheet" />
-        <link href="https://cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css" rel="stylesheet" />
         <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
         <script src="advanced-progress-tracker.min.js"></script>
         <script>
@@ -23,15 +28,37 @@
             });
         </script>
         <style>
-        body { font-family:'Roboto'; background-color:#fafafa; line-height:1.5;}
+         #map { position:fixed; top:0; bottom:0; width:50%;}
         </style>
     </head>
-
     <body>
-        <div id="MainContent" class="centerAll">
+        <style>
+section {
+    padding:  5px 25px;
+    line-height: 25px;
+    border-bottom: 1px solid #ddd;
+    opacity: 0.25;
+    font-size: 13px;
+}
+section.active {
+    opacity: 1;
+}
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 5px;
+}
+</style>
+<div id='map'></div>
+<div id='features'>
+    <div id="navbar">
+        <a href="http://insurrection1946.in/"><img src="logo-1.png" alt="insurrection1946"></a>
+        <div id=m> <a href="Start">Bombay</a>
+        <a href="">South Asia</a>
+        <a href="">Empire</a></div>
+</div> 
             <div id="TrackScrollProgress">
                 <div class="trackThis">
-                    <h1 data-name="1946"></h1>
+                    <h1 data-name=" Feb 1946"></h1>
                     <a href="#E1002"><section id='E1002'>
         <h1>February 15, 1946 HMIS Talwar 1000</h1>
         <p>Seven days passed. Nothing happened. The CO did not even bother to heed his brother officer's advice. He deferred the hearing till Saturday, the normal day for such work.</p>
@@ -264,8 +291,7 @@
         <p>Jawaharlal Nehru: A whole new chapter, but misguided, and no sympathy for vandalism.</p>
         <a href="img/E1047.jpg" data-lightbox="image-1"><img src="img/E1047.jpg" alt="E1047"></a>
     </section></a>
-<a href="#E1055"><section id='E1055'>
-                    
+<a href="#E1055"><section id='E1055'>     
                 </div>
                 <hr />
                 <div class="trackThis">
@@ -320,6 +346,482 @@
                 </div>
             </div>
         </div>
+     </div>
+</div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FtYW4iLCJhIjoiY2lzajQ2N2YzMDF4cjJ1cHVsdzd1b2ZlOCJ9.K6uUaMmeJ16TFmaORHcp0g';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/gaman/cjcspd02i0cnh2sntpdsvuusm',
+    center: [80.011,24.062], //starting centre
+    zoom: 3.5, //starting zoom
+    maxZoom: 4.5 //cap on how far they can zoom in
+});
+map.on('load', function() {
+    map.addLayer({
+        'id': 'wms-layer',
+        'type': 'raster',
+        'source': {
+            'type': 'raster',
+            'tiles': [
+                'https://api.mapbox.com/v4/sanjayb.6g7047bl/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoic2FuamF5YiIsImEiOiJjamQ2M2hucTAwaDI2Mndxb2p3dXNxbmRhIn0.-vCHgT_HGq_iCa-qURd_ug'
+                // 'http://mapwarper.net/maps/tile/26881/330/100/100.png '
+            ],
+        },
+        'paint': {}
+    }, 'aeroway-taxiway');
+});
+   var feature = features[0];
+    // Populate the popup and set its coordinates
+    // based on the feature found.
+    popup.setLngLat(feature.geometry.coordinates)
+        .setHTML(feature.properties.NAME)
+        .addTo(map);
+});
+    
+var chapters = {
+    'E1002': {
+        center: [72.825808,18.916782],
+        zoom: 15,
+        speed: 0.8,
+        pitch: 0
+    },
+    'E1003': {
+        center: [72.825808,18.916782],
+        zoom: 17.5
+    },
+    'E1004a': {
+        bearing: 0,
+        center: [72.825808,18.916782],
+        zoom: 17.5,
+        pitch: 0
+    },
+    'E1005': {
+        center: [72.832,18.920],
+        zoom: 14.3,
+        speed: 0.8,
+        pitch: 0
+    },
+     'E1007': {
+        center: [72.825808,18.916782],
+        zoom: 15,
+        speed: 1,
+        pitch: 0
+    },
+    'E1008': {
+        bearing: 0,
+        center: [72.838,18.930],
+        zoom: 16.3,
+        speed: 0.5,
+        pitch: 0
+    },
+     'E1009': {
+        bearing: 0,
+        center: [72.838,18.930],
+        zoom: 16.3,
+        pitch: 0
+    },
+    'E1010': {
+        bearing: 0,
+        center: [72.991,19.246],
+        zoom: 11,
+        speed: 0.5,
+        pitch: 0
+    },
+     'E1011': {
+        bearing: 0,
+        center: [72.841214,18.933490],
+        zoom: 16.3,
+        speed: 0.5,
+        pitch: 0
+    },
+     'E1012': {
+        bearing: 0,
+        center: [72.828773,18.918124],
+        zoom: 16.3,
+        speed: 0.5,
+        pitch: 0
+    },
+    'E1013': {
+        bearing: 0,
+        center: [72.984709,19.236753],
+        zoom: 16.3,
+        speed: 0.5,
+        pitch: 0
+    },
+    'E1014': {
+        bearing: 0,
+        center: [72.828773,18.918124],
+        zoom: 15,
+        speed: 0.5,
+        pitch: 0
+    },
+     'E1015': {
+        bearing: 0,
+        center: [72.826,18.917],
+        zoom: 12,
+        speed: 0.5,
+        pitch: 0
+    },
+    'E1016': {
+        bearing: 0,
+        center: [72.838199,18.930336],
+        zoom: 12,
+        speed: 0.5,
+        pitch: 0
+    },
+      'E1017': {
+        bearing: 0,
+        center: [72.874,19.112],
+        zoom: 13.5,
+        speed: 0.5,
+        pitch: 0
+    },
+       'E1018': {
+        bearing: 0,
+        center: [72.840,18.933],
+        zoom: 15,
+        speed: 0.5,
+        pitch: 0
+    },
+       'E1019': {
+        bearing: 0,
+        center: [72.840,18.933],
+        zoom: 15,
+        pitch: 0
+    },
+        'E1020': {
+        bearing: 0,
+        center: [72.825808, 18.916782],
+        zoom: 15,
+        speed: 0.5,
+        pitch: 0
+    },
+       'E1021': {
+        bearing: 0,
+        center: [72.836911, 18.936783],
+        zoom: 15,
+        speed: 0.5,
+        pitch: 0
+    },
+       'E1022': {
+        bearing: 0,
+        center: [72.823586, 18.914645],
+        zoom: 15,
+        speed: 0.5,
+        pitch: 0
+    },
+       'E1023': {
+        bearing: 0,
+        center: [72.840487, 18.931905],
+        zoom: 15,
+        speed: 0.5,
+        pitch: 0
+    },
+       'E1024': {
+        bearing: 0,
+        center: [72.841214, 18.933490],
+        zoom: 15,
+        speed: 0.5,
+        pitch: 0
+    },
+       'E1025': {
+        /*THIS NEEDS TO BE FIXED*/
+        bearing: 0,
+        center: [72.841214,18.933490],
+        zoom: 15,
+        speed: 0.5,
+        pitch: 0
+    },
+    'E1026': {
+        /*THIS NEEDS TO BE FIXED*/
+        bearing: 0,
+        center: [72.862229,19.006603],
+        zoom: 15,
+        speed: 0.5,
+        pitch: 0
+    },
+       'E1027': {
+        bearing: 0,
+        center: [72.838199,18.930336],
+        zoom: 15,
+        speed: 0.5,
+        pitch: 0
+    },
+     'E1029': {
+        bearing: 0,
+        center: [72.841214, 18.933490],
+        zoom: 15,
+        speed: 0.5,
+        pitch: 0
+    },
+     'E1030': {
+        bearing: 0,
+        center: [72.841214,18.933490],
+        zoom: 15,
+        speed: 0.5,
+        pitch: 0
+    },
+       'E1031': {
+        bearing: 0,
+        center: [72.841214,18.933490],
+        zoom: 15,
+        speed: 0.5,
+        pitch: 0
+    },
+        'E1032': {
+        bearing: 0,
+        center: [72.836156,18.931832],
+        zoom: 15,
+        speed: 0.5,
+        pitch: 0
+    },
+        'E1033': {
+        bearing: 0,
+        center: [72.840487,18.931905],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+        'E1034': {
+        bearing: 0,
+        center: [72.841214,18.933490],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+         'E1035': {
+        bearing: 0,
+        center: [72.840487,18.931905],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+          'E1036': {
+        bearing: 0,
+        center: [72.841214,18.933490],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+         'E1037': {
+             //ASHISH WE GOTTA FIGURE THIS ONE OUT
+        bearing: 0,
+        center: [72.841214,18.933490],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+       'E1039': {
+             //ASHISH WE GOTTA FIGURE THIS ONE OUT
+        bearing: 0,
+        center: [72.841214,18.933490],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+          'E1040': {
+        bearing: 0,
+        center: [72.834688,18.919220],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+         'E1041': {
+             //ASHISH WE GOTTA FIGURE THIS ONE OUT
+        bearing: 0,
+        center: [72.841214,18.933490],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+          'E1042': {
+        bearing: 0,
+        center: [72.825808,18.916782],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+        'E1042a': {
+        bearing: 0,
+        center: [72.840487,18.931905],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+       'E1043': {
+        bearing: 0,
+        center: [72.984709,19.236753],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+     'E1044': {
+        bearing: 0,
+        center: [72.825808,18.916782],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+    'E1045': {
+        bearing: 0,
+        center: [72.848217,19.014390],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+     'E1047': {
+        bearing: 0,
+        center: [72.812649,18.954512],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+     'E1048': {
+        bearing: 0,
+        center: [72.840487,18.931905],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+     'E1050': {
+        bearing: 0,
+        center: [72.840487,18.9319050],
+        zoom: 15,
+        pitch: 0
+    },
+     'E1053': {
+        bearing: 0,
+        center: [72.840487,18.931905],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+     'E1054': {
+        bearing: 0,
+        center: [72.840208,19.025366],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+     'E1055': {
+          //ASHISH WE GOTTA FIGURE THIS ONE OUT
+        bearing: 0,
+        center: [72.840208,19.025366],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+     'E1056': {
+        bearing: 0,
+        center: [72.8229,18.951929],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+     'E1057': {
+        bearing: 0,
+        center: [72.837532,19.054776],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+     'E1058': {
+        bearing: 0,
+        center: [72.840487,18.931905],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+       'E1060': {
+        bearing: 0,
+        center: [72.840487,18.931905],
+        zoom: 15,
+        pitch: 0
+    },
+    'E1062': {
+         //ASHISH WE GOTTA FIGURE THIS ONE OUT
+        bearing: 0,
+        center: [72.840487,18.931905],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+    'E1063': {
+        //ASHISH WE GOTTA FIGURE THIS ONE OUT
+        bearing: 0,
+        center: [72.840487,18.931905],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+      'E1064': {
+        bearing: 0,
+        center: [72.94864,19.036125],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+       'E1065': {
+        bearing: 0,
+        center: [72.828547,18.941603],
+        speed: 0.5,
+        zoom: 15,
+        pitch: 0
+    },
+    'charing-cross': {
+        bearing: 90,
+        center: [-0.12416858, 51.50779757],
+        zoom: 14.3,
+        pitch: 20
+    }
+};
+// On every scroll event, check which element is on screen
+window.onscroll = function() {
+    var chapterNames = Object.keys(chapters);
+    for (var i = 0; i < chapterNames.length; i++) {
+        var chapterName = chapterNames[i];
+        if (isElementOnScreen(chapterName)) {
+            setActiveChapter(chapterName);
+            break;
+        }
+    }
+};
+var activeChapterName = 'Start';
+function setActiveChapter(chapterName) {
+    if (chapterName === activeChapterName) return;
+    map.flyTo(chapters[chapterName]);
+    document.getElementById(chapterName).setAttribute('class', 'active');
+    document.getElementById(activeChapterName).setAttribute('class', '');
+    activeChapterName = chapterName;
+}
+function isElementOnScreen(id) {
+    var element = document.getElementById(id);
+    var bounds = element.getBoundingClientRect();
+    return bounds.top < window.innerHeight && bounds.bottom > 0;
+}
+ map.on('click', 'mutinymap-places-c2wktn', function (e) {
+        new mapboxgl.Popup()
+            .setLngLat(e.features[0].geometry.coordinates)
+            .setHTML(e.features[0].properties.description)
+            .addTo(map);
+    });
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'mutinymap-places-c2wktn', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'mutinymap-places-c2wktn', function () {
+        map.getCanvas().style.cursor = '';
+    });
+$('a[href*=#]').click(function(event){
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+    event.preventDefault();
+});
+$('body').progressTracker();
+    </script>
     </body><script type="text/javascript">
 
   var _gaq = _gaq || [];
