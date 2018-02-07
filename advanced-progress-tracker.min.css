@@ -1,3 +1,23 @@
+body {
+ margin:0;
+ padding:24px 16px;
+ color:#000;
+ background-color:#fff
+}
+h1 {
+ font-size:38px
+}
+h3 {
+ font-size:24px
+}
+hr {
+ margin-top:24px;
+ border:2px solid rgba(0,0,0,0.1)
+}
+.centerAll {
+ margin:0 auto;
+ max-width:960px
+}
 .trackThis hr {
  margin-top:0px;
  border-top:1px solid rgba(0,0,0,0.07);
@@ -139,7 +159,7 @@
  background-color:#e70000
 }
 //SUMANDRO, YOU WANT TO EDIT ALL THE VERTICAL STUFF & THE SCROLL CONTAINER
-.verticalScrollProgress {  
+.verticalScrollProgress {
  display:block;
  position:fixed;
  top:50px;
@@ -148,7 +168,7 @@
  width:200px
 }
 .verticalScrollProgress.right {
- right:50px;  
+ right:50px;
  left:auto
 }
 .verticalScrollProgress.untitled {
