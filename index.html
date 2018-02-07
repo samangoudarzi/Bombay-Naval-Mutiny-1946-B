@@ -8,13 +8,28 @@
     <script src="jquery.min.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet' />
-        <link href="advanced-progress-tracker.css" rel="stylesheet"> <!--added for scale-->
-<script src="//code.jquery.com/jquery-3.1.0.min.js"> </script> <!--added for scale-->
-<script src="advanced-progress-tracker.js"></script><!--added for scale-->
+    <link href="css/advanced-progress-tracker.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="js/advanced-progress-tracker.min.js"></script>
     <style>
         /*body { margin:0; padding:0; }*/
         #map { position:fixed; top:0; bottom:0; width:50%;}
     </style>
+    <script>
+            $('body').progressTracker({
+                horNumbering: false,
+                horTitles: true,
+                horTitlesOffset: 'top',
+                horMobileOnly: true,
+                verTracker: true,
+                verPosition: 'right',
+                trackAllHeadlines: true,
+                addFinalStop: true,
+                finalStopTitle: 'Last Section',
+                scrollSpeed: 1200
+            });
+        </script>
 </head>
 <body>
  <style>
@@ -33,6 +48,20 @@ section:last-child {
     margin-bottom: 5px;
 }
 </style>
+    div id="MainContent" class="centerAll">
+            <div id="TrackScrollProgress">
+                <div class="trackThis">
+                    <h1 data-name="Introduction">Advanced Scroll Progress Tracker Plugin Example</h3>
+                    <div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
 <div id='map'></div>
 <div id='features'>
     <div id="navbar">
@@ -41,7 +70,7 @@ section:last-child {
         <a href="">South Asia</a>
         <a href="">Empire</a></div>
     </div> 
-<div id="TrackScrollProgress">
+<div class="trackThis">
     <div class="spt-verticalScrollProgress spt-verRight spt-desktopOnly" style="width: 180px;"><div class="spt-verticalScrollProgressContainer"><div class="spt-verticalScrollProgressBar" style="height: 0%;"></div></div><div class="spt-vertScrollStopContainer"><div class="spt-finalStopCircle"></div><div class="spt-stopCircle spt-stop1" data-index="1" style="top: 0%;"></div><div class="spt-stopCircle spt-stop2" data-index="2" style="top: 3.42293%;"></div><div class="spt-stopCircle spt-stop3" data-index="3" style="top: 42.3711%;"></div><div class="spt-stopCircle spt-stop4" data-index="4" style="top: 56.7361%;"></div><div class="spt-stopCircle spt-stop5" data-index="5" style="top: 60.2889%;"></div><div class="spt-stopCircle spt-stop6" data-index="6" style="top: 94.8331%;"></div></div><div class="spt-vertScrollStopTitles" style="width: 170px;"><div class="spt-finalStopTitle">Miscellaneous, Questions &amp; Feedback</div><div class="spt-stopTitle spt-stop1" data-index="1" style="top: 0%;">Introduction</div><div class="spt-stopTitle spt-stop2" data-index="2" style="top: 3.42293%;">Options</div><div class="spt-stopTitle spt-stop3" data-index="3" style="top: 42.3711%;">Setup</div><div class="spt-stopTitle spt-stop4" data-index="4" style="top: 56.7361%;">Tips &amp; Tricks</div><div class="spt-stopTitle spt-stop5" data-index="5" style="top: 60.2889%;">Update history</div><div class="spt-stopTitle spt-stop6" data-index="6" style="top: 94.8331%;">Credits</div></div></div>
 <a href="#Start"><section id='Start' class='active'>
         <h3>This is my description Please Scroll Down to Start the Story</h3>
@@ -61,6 +90,8 @@ section:last-child {
        <p> Food was bad again. The dal was worse than the previous day's. It had been badly cooked, there was no salt in it, it had not even been boiled properly. Everyone walked out of the mess in silent protest.</p>
          <img src="E1004a.jpg" alt="E1004a">
         </section></a>
+    </div>
+    <div class="trackThis">
     <a href="#E1005"><section id='E1005'>
         <h3>18-02-1946; 0830</h3>
         <p> At 8:30 a.m. the daily morning inspection for divisions (parade) was piped. But not a soul, except a few Chief Petty Officers and Petty Officers turned up on parade. At the Remote Control Office, the most important branch of the RIN for its day-to-day administration, the ratings came in for their usual morning class. Then they heard of the strike of the CCO ratings. They too walked out and there was no one on parade at 9:30 a.m.</p>
@@ -96,6 +127,7 @@ section:last-child {
          <p> At about 12:30 p.m. a meeting was called. All gathered round. One of the leaders of the Talwar Strike Committee spoke. He narrated all the events that had led up to the strike and the ratings listened quietly...These are the demands we propose to place before the authorities today: 1. Release all political prisoners including those of the INA; 2. Take action against Commander King, CO of the Talwar, for using insulting language against the ratings; 3. Speedy demobilisation and provision for resettlement in peace-time employment; 4. Same scale of pay, allowances, etc. as those of RN ratings; 5. Access to NAAFI canteens; 6. Better food; 7. No return of clothing kit at the time of release; and 8. Withdrawal of Indian troops from Indonesia.".</p>
          <img src="E1012.jpg" alt="E1012">
         </section></a>
+    </div>
     <a href="#E1013"><section id='E1013'>
         <h3>19-02-1946; 1230</h3>
         <p> The Akbar had a tradition of ‘trouble’. It was probably the worst administered establishment in the whole of the RIN. Corruption of various kinds seemed to flourish there. Only ads recently as in 1944 the Hindu and Muslim ratings together had struck work because the Muslim ratings were not given enough time to say their prayers. As a result, some 200 had been dismissed. But the spirit of revolt could not be crushed. It was only on the 19th that the news of the strike reached the Akbar. For about two hours there was wild excitement all over the establishment. Work virtually stopped. At about 12:30 p.m. the authorities decided to step in. A general parade was called. </p>
@@ -805,7 +837,20 @@ $('a[href*=#]').click(function(event){
     }, 500);
     event.preventDefault();
 });
-$('body').progressTracker();
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 
 </script>
 
