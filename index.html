@@ -13,6 +13,7 @@
         <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
         <script src="advanced-progress-tracker.min.js"></script>
         <script>
+            //THIS SECTION CALLS THE TRACKER AND DERIVES IT BASED ON THE BELOW SPECS
             $('body').progressTracker({
                 horNumbering: false,
                 horTitles: true,
@@ -59,9 +60,10 @@ section:last-child {
 <a href="#Start"><section id='Start' class='active'>
         <h3>This is my description Please Scroll Down to Start the Story</h3>
     </section></a>
+    <!--THE TRACKSCROLLPROGRESS DIV WILL ESSENTIALY DEFINES WHAT WILL GET INCLUDED-->
     <div id="TrackScrollProgress">
-                <div class="trackThis">
-<h1 data-name=" Feb 1946"></h1>
+                <div class="trackThis"> <!--EVERY NEW TRACKTHIS IS A NEW SECTION ESSENTIALLY-->
+<h1 data-name=" Feb 1946"></h1> <!--I THINK THE CODE WAS WRITTEN IN A WAY THAT IT WILL ESSENTIALLY LABEL THE SECTION BASED ON THE HEADING, SO YOU CAN JUST DO THE FOLLOWING TO DEFINE HEADING NAME WITHOUT ACTUALLY CREATING A NEW HEADING-->
     <a href="#E1002"><section id='E1002'>
           <h3>15-02-1946; 1000</h3>
         <p>Seven days passed. Nothing happened. The CO did not even bother to heed his brother officer's advice. He deferred the hearing till Saturday, the normal day for such work.</p>
@@ -803,6 +805,7 @@ $('a[href*=#]').click(function(event){
     }, 500);
     event.preventDefault();
 });
+//ADD THIS FOR THE PROGRESS TRACKER
 $('body').progressTracker();
     </script>
     </body><script type="text/javascript">
