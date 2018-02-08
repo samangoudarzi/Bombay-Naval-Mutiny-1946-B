@@ -26,11 +26,6 @@
                 finalStopTitle: 'Last Section',
                 scrollSpeed: 1200
             });
-            //ADD THIS FOR POPUP
-    .mapboxgl-popup {
-        max-width: 400px;
-        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    }
         </script>
     <style>
         /*body { margin:0; padding:0; }*/
@@ -382,6 +377,10 @@ map.on('load', function() {
         'paint': {}
     }, 'aeroway-taxiway');
 });
+      .mapboxgl-popup {
+        max-width: 400px;
+        font: 10px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
 // When a click event occurs on a feature in the places layer, open a popup at the
     // location of the feature, with description HTML from its properties.
     map.on('click', 'inserruction1946-rinfleet-58b3j1', function (e) {
