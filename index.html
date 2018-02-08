@@ -384,7 +384,7 @@ map.on('load', function() {
 
 // When a click event occurs on a feature in the places layer, open a popup at the
     // location of the feature, with description HTML from its properties.
-    map.on('click', 'inserruction1946-rinfleet-6394a5', function (e) {
+    map.on('click', 'inserruction1946_RINFleet', function (e) {
         new mapboxgl.Popup()
             .setLngLat(e.features[0].geometry.coordinates)
             .setHTML(e.features[0].properties.PopUp)
@@ -392,12 +392,12 @@ map.on('load', function() {
     });
 
     // Change the cursor to a pointer when the mouse is over the places layer.
-    map.on('mouseenter', 'inserruction1946-rinfleet-6394a5', function () {
+    map.on('mouseenter', 'inserruction1946_RINFleet', function () {
         map.getCanvas().style.cursor = 'pointer';
     });
 
     // Change it back to a pointer when it leaves.
-    map.on('mouseleave', 'inserruction1946-rinfleet-6394a5', function () {
+    map.on('mouseleave', 'inserruction1946_RINFleet', function () {
         map.getCanvas().style.cursor = '';
     });
     
