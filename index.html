@@ -741,7 +741,7 @@ var chapters = {
         pitch: 20
     }
 };
-// On every scroll event, check which element is on screen
+// synching scrolling with fly to
 window.onscroll = function() {
     var chapterNames = Object.keys(chapters);
     for (var i = 0; i < chapterNames.length; i++) {
@@ -765,13 +765,14 @@ function isElementOnScreen(id) {
     var bounds = element.getBoundingClientRect();
     return bounds.top < window.innerHeight && bounds.bottom > 0;
 }
+//scroll to clicked section
 $('a[href*=#]').click(function(event){
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top
     }, 500);
     event.preventDefault();
 });
-//ADD THIS FOR THE PROGRESS TRACKER
+//progress tracker function
 $('body').progressTracker();
     </script>
     </body><script type="text/javascript">
@@ -785,6 +786,5 @@ $('body').progressTracker();
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
-
 </body>
 </html>
