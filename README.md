@@ -1,4 +1,4 @@
-# insurrection1946
+# Insurrection 1946
 
 This is the intial repository containing draft files for the [Insurrection 1946 web map](https://cis-india.github.io/insurrection1946/). The map was created for the [Insurrection 1946 exhibition](http://insurrection1946.in/) at the [Centre for Internet and Society (CIS)](https://cis-india.org/), India. 
 
