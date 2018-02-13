@@ -33,7 +33,7 @@
         </div>
     </div>
  <a href="#Start"><section id='Start' class='active'>
-        <h3>Please Scroll Down to Start the Story</h3>
+    <h3>Please Scroll Down to Start the Story</h3>
     </section></a>
     <!--THE TRACKSCROLLPROGRESS DIV WILL ESSENTIALY DEFINES WHAT WILL GET TRACKED-->
     <div id="TrackScrollProgress">
@@ -322,28 +322,15 @@
     </div>
 </div>
 <script>
+//add map features
 mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FtYW4iLCJhIjoiY2lzajQ2N2YzMDF4cjJ1cHVsdzd1b2ZlOCJ9.K6uUaMmeJ16TFmaORHcp0g';
-var map = new mapboxgl.Map({
+    var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/gaman/cjcspd02i0cnh2sntpdsvuusm',
     center: [72.834,18.949],
     zoom: 12,
-});
-map.on('load', function() {
-    map.addLayer({
-        'id': 'wms-layer',
-        'type': 'raster',
-        'source': {
-            'type': 'raster',
-            'tiles': [
-                'http://mapwarper.net/maps/tile/26881/330/100/100.png '
-            ],
-        },
-        'paint': {}
-    }, 'aeroway-taxiway');
-});
-// When a click event occurs on a feature in the places layer, open a popup at the
-    // location of the feature, with description HTML from its properties.
+    });
+//popup function
     map.on('click', 'inserruction1946-rinfleet', function (e) {
         new mapboxgl.Popup()
             .setLngLat(e.features[0].geometry.coordinates)
