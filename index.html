@@ -331,21 +331,19 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FtYW4iLCJhIjoiY2lzajQ2N2YzMDF4cjJ1cHVsdzd1b
     zoom: 12,
     });
 //popup function
-    map.on('click', 'inserruction1946-rinfleet', function (e) {
-        new mapboxgl.Popup()
-            .setLngLat(e.features[0].geometry.coordinates)
-            .setHTML(e.features[0].properties.Popup)
-            .addTo(map);
-    });
-    // Change the cursor to a pointer when the mouse is over the places layer.
-    map.on('mouseenter', 'inserruction1946-rinfleet', function () {
-        map.getCanvas().style.cursor = 'pointer';
-    });
-    // Change it back to a pointer when it leaves.
-    map.on('mouseleave', 'inserruction1946-rinfleet', function () {
-        map.getCanvas().style.cursor = '';
-    });
-    
+map.on('click', 'inserruction1946-rinfleet', function (e) {
+    new mapboxgl.Popup()
+        .setLngLat(e.features[0].geometry.coordinates)
+        .setHTML(e.features[0].properties.Popup)
+        .addTo(map);
+});
+map.on('mouseenter', 'inserruction1946-rinfleet', function () {
+    map.getCanvas().style.cursor = 'pointer';
+});
+map.on('mouseleave', 'inserruction1946-rinfleet', function () {
+    map.getCanvas().style.cursor = '';
+});
+//map fly to locations  
 var chapters = {
     'E1002': {
         center: [72.825808,18.916782],
