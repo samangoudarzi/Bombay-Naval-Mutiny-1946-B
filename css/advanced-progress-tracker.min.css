@@ -151,8 +151,8 @@
  width:200px
 }
 .verticalScrollProgress.right {
- //right:50px;
- left:auto
+ right:50px;
+ //left:auto
 }
 .verticalScrollProgress.untitled {
  width:20px
