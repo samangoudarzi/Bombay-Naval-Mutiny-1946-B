@@ -76,7 +76,7 @@
 .historyVersion:last-of-type {
  margin:0
 }
-.horizontalScrollProgress {
+/*.horizontalScrollProgress {
  padding-top:29px;
  height:31px
 }
@@ -141,7 +141,7 @@
  width:0%;
  height:inherit;
  background-color:#e70000
-}
+}*/
 .verticalScrollProgress {
  display:block;
  position:fixed;
