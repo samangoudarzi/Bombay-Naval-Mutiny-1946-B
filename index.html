@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
@@ -17,55 +18,20 @@
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="js/advanced-progress-tracker.min.js"></script>
 </head>
-        <script>
-            //THIS SECTION CALLS THE TRACKER AND DERIVES IT BASED ON THE BELOW SPECS
-            $('body').progressTracker({
-                horNumbering: false,
-                horTitles: true,
-                horTitlesOffset: 'top',
-                horMobileOnly: true,
-                verTracker: true,
-                verPosition: 'right',
-                trackAllHeadlines: true,
-                addFinalStop: true,
-                finalStopTitle: 'Last Section',
-                scrollSpeed: 1200
-            });
-                  .mapboxgl-popup {
-        max-width: 400px;
-        font: 10px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    }
-        </script>
-    <style>
-        /*body { margin:0; padding:0; }*/
-        #map { position:fixed; top:0; bottom:0; width:50%;}
-    </style>
-</head>
 <body>
- <style>
-section {
-    padding:  5px 25px;
-    line-height: 25px;
-    border-bottom: 1px solid #ddd;
-    opacity: 0.25;
-    font-size: 13px;
-}
-section.active {
-    opacity: 1;
-}
-section:last-child {
-    border-bottom: none;
-    margin-bottom: 5px;
-}
-</style>
 <div id='map'></div>
 <div id='features'>
     <div id="navbar">
-        <a href="http://insurrection1946.in/"><img src="logo-1.png" alt="insurrection1946"></a>
-        <div id=m> <a href="Start">Bombay</a>
-        <a href="">South Asia</a>
-        <a href="">Empire</a></div>
-    </div> 
+        <div id="logo" style="clear:both">
+            <a href="index.html"><img src="img/logo-1.png" alt="Insurrection 1946"></a>
+        </div>
+        <div id="navlinks"> 
+            <a href="index.html">Bombay</a>
+            <a href="">South Asia</a>
+            <a href="">British Empire</a>
+            <a href="http://insurrection1946.in/" target="_blank">The Exhibition</a>
+        </div>
+    </div>
 <a href="#Start"><section id='Start' class='active'>
         <h3>This is my description Please Scroll Down to Start the Story</h3>
     </section></a>
