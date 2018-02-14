@@ -4,6 +4,6 @@ This is the intial repository containing draft files for the [Insurrection 1946 
 
 Location data and images are selected and compiled by [Ashish Rajadhyaksha](https://cscsarchive.academia.edu/AshishRajadhyaksha) and [Saman Goudarzi](https://github.com/samangoudarzi). Data/image are shared under originally applicable licenses, and code is shared under CC-BY. 
 
-[Mapbox](https://www.mapbox.com/) and [Advanced jQuery Scroll Progress Tracker](https://www.jqueryscript.net/other/Customizable-Page-Scroll-Progress-Indicator-Plugin-For-jQuery.html) was used.
+[Mapbox](https://www.mapbox.com/) and [Advanced jQuery Scroll Progress Tracker](https://www.jqueryscript.net/other/Customizable-Page-Scroll-Progress-Indicator-Plugin-For-jQuery.html) were used.
 
 The final project repository can he found [here](https://github.com/cis-india/insurrection1946)
